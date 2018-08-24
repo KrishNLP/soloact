@@ -1,7 +1,9 @@
-PROJECT TITLE <TO DO>
+PROJECT TITLE
+- TO DO -
 ==============================
 
-ABSTRACT <TO DO>
+ABSTRACT 
+- TO DO - 
 
 Project Organization
 ------------
