@@ -1,9 +1,15 @@
-PROJECT TITLE
+Project Title
+------------
 - TO DO -
-==============================
 
-ABSTRACT 
+Abstract 
+------------
 - TO DO - 
+
+Setup
+------------
+conda install --file requirements.txt
+
 
 Project Organization
 ------------
