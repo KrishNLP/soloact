@@ -1,0 +1,401 @@
+,audioFileName,excitationStyle,expressionStyle,fretNumber,guitarModel,instrument,offsetSec,onsetSec,pitch,recordingDate,stringNumber
+0,G53-40100-1111-00001.wav,PK,NO,0,Fender Strat Clean Neck SC,EGUI,2.5,0.2,40,07.01.2013,1
+1,G53-41101-1111-00002.wav,PK,NO,1,Fender Strat Clean Neck SC,EGUI,2.5,0.2,41,07.01.2013,1
+2,G53-42102-1111-00003.wav,PK,NO,2,Fender Strat Clean Neck SC,EGUI,2.5,0.2,42,07.01.2013,1
+3,G53-43103-1111-00004.wav,PK,NO,3,Fender Strat Clean Neck SC,EGUI,2.5,0.2,43,07.01.2013,1
+4,G53-44104-1111-00005.wav,PK,NO,4,Fender Strat Clean Neck SC,EGUI,2.5,0.2,44,07.01.2013,1
+5,G53-45105-1111-00006.wav,PK,NO,5,Fender Strat Clean Neck SC,EGUI,2.5,0.2,45,07.01.2013,1
+6,G53-45200-1111-00014.wav,PK,NO,0,Fender Strat Clean Neck SC,EGUI,2.5,0.2,45,07.01.2013,2
+7,G53-46106-1111-00007.wav,PK,NO,6,Fender Strat Clean Neck SC,EGUI,2.5,0.2,46,07.01.2013,1
+8,G53-46201-1111-00015.wav,PK,NO,1,Fender Strat Clean Neck SC,EGUI,2.5,0.2,46,07.01.2013,2
+9,G53-47107-1111-00008.wav,PK,NO,7,Fender Strat Clean Neck SC,EGUI,2.5,0.2,47,07.01.2013,1
+10,G53-47202-1111-00016.wav,PK,NO,2,Fender Strat Clean Neck SC,EGUI,2.5,0.2,47,07.01.2013,2
+11,G53-48108-1111-00009.wav,PK,NO,8,Fender Strat Clean Neck SC,EGUI,2.5,0.2,48,07.01.2013,1
+12,G53-48203-1111-00017.wav,PK,NO,3,Fender Strat Clean Neck SC,EGUI,2.5,0.2,48,07.01.2013,2
+13,G53-49109-1111-00010.wav,PK,NO,9,Fender Strat Clean Neck SC,EGUI,2.5,0.2,49,07.01.2013,1
+14,G53-49204-1111-00018.wav,PK,NO,4,Fender Strat Clean Neck SC,EGUI,2.5,0.2,49,07.01.2013,2
+15,G53-50110-1111-00011.wav,PK,NO,10,Fender Strat Clean Neck SC,EGUI,2.5,0.2,50,07.01.2013,1
+16,G53-50205-1111-00019.wav,PK,NO,5,Fender Strat Clean Neck SC,EGUI,2.5,0.2,50,07.01.2013,2
+17,G53-50300-1111-00027.wav,PK,NO,0,Fender Strat Clean Neck SC,EGUI,2.5,0.19,50,07.01.2013,3
+18,G53-51111-1111-00012.wav,PK,NO,11,Fender Strat Clean Neck SC,EGUI,2.5,0.2,51,07.01.2013,1
+19,G53-51206-1111-00020.wav,PK,NO,6,Fender Strat Clean Neck SC,EGUI,2.5,0.2,51,07.01.2013,2
+20,G53-51301-1111-00028.wav,PK,NO,1,Fender Strat Clean Neck SC,EGUI,2.5,0.2,51,07.01.2013,3
+21,G53-52112-1111-00013.wav,PK,NO,12,Fender Strat Clean Neck SC,EGUI,2.5,0.2,52,07.01.2013,1
+22,G53-52207-1111-00021.wav,PK,NO,7,Fender Strat Clean Neck SC,EGUI,2.5,0.2,52,07.01.2013,2
+23,G53-52302-1111-00029.wav,PK,NO,2,Fender Strat Clean Neck SC,EGUI,2.5,0.2,52,07.01.2013,3
+24,G53-53208-1111-00022.wav,PK,NO,8,Fender Strat Clean Neck SC,EGUI,2.5,0.2,53,07.01.2013,2
+25,G53-53303-1111-00030.wav,PK,NO,3,Fender Strat Clean Neck SC,EGUI,2.5,0.2,53,07.01.2013,3
+26,G53-54209-1111-00023.wav,PK,NO,9,Fender Strat Clean Neck SC,EGUI,2.5,0.2,54,07.01.2013,2
+27,G53-54304-1111-00031.wav,PK,NO,4,Fender Strat Clean Neck SC,EGUI,2.5,0.2,54,07.01.2013,3
+28,G53-55210-1111-00024.wav,PK,NO,10,Fender Strat Clean Neck SC,EGUI,2.5,0.2,55,07.01.2013,2
+29,G53-55305-1111-00032.wav,PK,NO,5,Fender Strat Clean Neck SC,EGUI,2.5,0.2,55,07.01.2013,3
+30,G53-55400-1111-00040.wav,PK,NO,0,Fender Strat Clean Neck SC,EGUI,2.5,0.2,55,07.01.2013,4
+31,G53-56211-1111-00025.wav,PK,NO,11,Fender Strat Clean Neck SC,EGUI,2.5,0.2,56,07.01.2013,2
+32,G53-56306-1111-00033.wav,PK,NO,6,Fender Strat Clean Neck SC,EGUI,2.5,0.2,56,07.01.2013,3
+33,G53-56401-1111-00041.wav,PK,NO,1,Fender Strat Clean Neck SC,EGUI,2.5,0.2,56,07.01.2013,4
+34,G53-57212-1111-00026.wav,PK,NO,12,Fender Strat Clean Neck SC,EGUI,2.5,0.2,57,07.01.2013,2
+35,G53-57307-1111-00034.wav,PK,NO,7,Fender Strat Clean Neck SC,EGUI,2.5,0.2,57,07.01.2013,3
+36,G53-57402-1111-00042.wav,PK,NO,2,Fender Strat Clean Neck SC,EGUI,2.5,0.2,57,07.01.2013,4
+37,G53-58308-1111-00035.wav,PK,NO,8,Fender Strat Clean Neck SC,EGUI,2.5,0.2,58,07.01.2013,3
+38,G53-58403-1111-00043.wav,PK,NO,3,Fender Strat Clean Neck SC,EGUI,2.5,0.2,58,07.01.2013,4
+39,G53-59309-1111-00036.wav,PK,NO,9,Fender Strat Clean Neck SC,EGUI,2.5,0.2,59,07.01.2013,3
+40,G53-59404-1111-00044.wav,PK,NO,4,Fender Strat Clean Neck SC,EGUI,2.5,0.2,59,07.01.2013,4
+41,G53-59500-1111-00053.wav,PK,NO,0,Fender Strat Clean Neck SC,EGUI,2.5,0.19,59,07.01.2013,5
+42,G53-60310-1111-00037.wav,PK,NO,10,Fender Strat Clean Neck SC,EGUI,2.5,0.2,60,07.01.2013,3
+43,G53-60405-1111-00045.wav,PK,NO,5,Fender Strat Clean Neck SC,EGUI,2.5,0.2,60,07.01.2013,4
+44,G53-60501-1111-00054.wav,PK,NO,1,Fender Strat Clean Neck SC,EGUI,2.5,0.2,60,07.01.2013,5
+45,G53-61311-1111-00038.wav,PK,NO,11,Fender Strat Clean Neck SC,EGUI,2.5,0.2,61,07.01.2013,3
+46,G53-61406-1111-00046.wav,PK,NO,6,Fender Strat Clean Neck SC,EGUI,2.5,0.2,61,07.01.2013,4
+47,G53-61502-1111-00055.wav,PK,NO,2,Fender Strat Clean Neck SC,EGUI,2.5,0.2,61,07.01.2013,5
+48,G53-62312-1111-00039.wav,PK,NO,12,Fender Strat Clean Neck SC,EGUI,2.5,0.2,62,07.01.2013,3
+49,G53-62407-1111-00047.wav,PK,NO,7,Fender Strat Clean Neck SC,EGUI,2.5,0.2,62,07.01.2013,4
+50,G53-62503-1111-00056.wav,PK,NO,3,Fender Strat Clean Neck SC,EGUI,2.5,0.2,62,07.01.2013,5
+51,G53-63408-1111-00048.wav,PK,NO,8,Fender Strat Clean Neck SC,EGUI,2.5,0.2,63,07.01.2013,4
+52,G53-63504-1111-00057.wav,PK,NO,4,Fender Strat Clean Neck SC,EGUI,2.5,0.2,63,07.01.2013,5
+53,G53-64409-1111-00049.wav,PK,NO,9,Fender Strat Clean Neck SC,EGUI,2.5,0.2,64,07.01.2013,4
+54,G53-64505-1111-00058.wav,PK,NO,5,Fender Strat Clean Neck SC,EGUI,2.5,0.2,64,07.01.2013,5
+55,G53-64600-1111-00066.wav,PK,NO,0,Fender Strat Clean Neck SC,EGUI,2.5,0.2,64,07.01.2013,6
+56,G53-65410-1111-00050.wav,PK,NO,10,Fender Strat Clean Neck SC,EGUI,2.5,0.2,65,07.01.2013,4
+57,G53-65506-1111-00059.wav,PK,NO,6,Fender Strat Clean Neck SC,EGUI,2.5,0.2,65,07.01.2013,5
+58,G53-65601-1111-00067.wav,PK,NO,1,Fender Strat Clean Neck SC,EGUI,2.5,0.2,65,07.01.2013,6
+59,G53-66411-1111-00051.wav,PK,NO,11,Fender Strat Clean Neck SC,EGUI,2.5,0.2,66,07.01.2013,4
+60,G53-66507-1111-00060.wav,PK,NO,7,Fender Strat Clean Neck SC,EGUI,2.5,0.2,66,07.01.2013,5
+61,G53-66602-1111-00068.wav,PK,NO,2,Fender Strat Clean Neck SC,EGUI,2.5,0.2,66,07.01.2013,6
+62,G53-67412-1111-00052.wav,PK,NO,12,Fender Strat Clean Neck SC,EGUI,2.5,0.2,67,07.01.2013,4
+63,G53-67508-1111-00061.wav,PK,NO,8,Fender Strat Clean Neck SC,EGUI,2.5,0.2,67,07.01.2013,5
+64,G53-67603-1111-00069.wav,PK,NO,3,Fender Strat Clean Neck SC,EGUI,2.5,0.2,67,07.01.2013,6
+65,G53-68509-1111-00062.wav,PK,NO,9,Fender Strat Clean Neck SC,EGUI,2.5,0.2,68,07.01.2013,5
+66,G53-68604-1111-00070.wav,PK,NO,4,Fender Strat Clean Neck SC,EGUI,2.5,0.2,68,07.01.2013,6
+67,G53-69510-1111-00063.wav,PK,NO,10,Fender Strat Clean Neck SC,EGUI,2.5,0.2,69,07.01.2013,5
+68,G53-69605-1111-00071.wav,PK,NO,5,Fender Strat Clean Neck SC,EGUI,2.5,0.2,69,07.01.2013,6
+69,G53-70511-1111-00064.wav,PK,NO,11,Fender Strat Clean Neck SC,EGUI,2.5,0.2,70,07.01.2013,5
+70,G53-70606-1111-00072.wav,PK,NO,6,Fender Strat Clean Neck SC,EGUI,2.5,0.2,70,07.01.2013,6
+71,G53-71512-1111-00065.wav,PK,NO,12,Fender Strat Clean Neck SC,EGUI,2.5,0.2,71,07.01.2013,5
+72,G53-71607-1111-00073.wav,PK,NO,7,Fender Strat Clean Neck SC,EGUI,2.5,0.2,71,07.01.2013,6
+73,G53-72608-1111-00074.wav,PK,NO,8,Fender Strat Clean Neck SC,EGUI,2.5,0.2,72,07.01.2013,6
+74,G53-73609-1111-00075.wav,PK,NO,9,Fender Strat Clean Neck SC,EGUI,2.5,0.2,73,07.01.2013,6
+75,G53-74610-1111-00076.wav,PK,NO,10,Fender Strat Clean Neck SC,EGUI,2.5,0.2,74,07.01.2013,6
+76,G53-75611-1111-00077.wav,PK,NO,11,Fender Strat Clean Neck SC,EGUI,2.5,0.2,75,07.01.2013,6
+77,G53-76612-1111-00078.wav,PK,NO,12,Fender Strat Clean Neck SC,EGUI,2.5,0.2,76,07.01.2013,6
+78,1-E1-Major 00.wav,PK,NO,0,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.2,40,07.01.2013,1
+79,1-E1-Major 01.wav,PK,NO,1,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.208,41,07.01.2013,1
+80,1-E1-Major 02.wav,PK,NO,2,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.211,42,07.01.2013,1
+81,1-E1-Major 03.wav,PK,NO,3,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.199,43,07.01.2013,1
+82,1-E1-Major 04.wav,PK,NO,4,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.2,44,07.01.2013,1
+83,1-E1-Major 05.wav,PK,NO,5,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.174,45,07.01.2013,1
+84,1-E1-Major 06.wav,PK,NO,6,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.199,46,07.01.2013,1
+85,1-E1-Major 07.wav,PK,NO,7,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.166,47,07.01.2013,1
+86,1-E1-Major 08.wav,PK,NO,8,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.17,48,07.01.2013,1
+87,1-E1-Major 09.wav,PK,NO,9,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.186,49,07.01.2013,1
+88,1-E1-Major 10.wav,PK,NO,10,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.195,50,07.01.2013,1
+89,2-E1-Minor 00.wav,PK,NO,0,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.167,40,07.01.2013,1
+90,2-E1-Minor 01.wav,PK,NO,1,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.217,41,07.01.2013,1
+91,2-E1-Minor 02.wav,PK,NO,2,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.22,42,07.01.2013,1
+92,2-E1-Minor 03.wav,PK,NO,3,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.186,43,07.01.2013,1
+93,2-E1-Minor 04.wav,PK,NO,4,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.2,44,07.01.2013,1
+94,2-E1-Minor 05.wav,PK,NO,5,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.17,45,07.01.2013,1
+95,2-E1-Minor 06.wav,PK,NO,6,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.2,46,07.01.2013,1
+96,2-E1-Minor 07.wav,PK,NO,7,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.2,47,07.01.2013,1
+97,2-E1-Minor 08.wav,PK,NO,8,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.196,48,07.01.2013,1
+98,2-E1-Minor 09.wav,PK,NO,9,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.183,49,07.01.2013,1
+99,2-E1-Minor 10.wav,PK,NO,10,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.195,50,07.01.2013,1
+100,3-A2-Major 00.wav,PK,NO,0,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.179,45,07.01.2013,2
+101,3-A2-Major 01.wav,PK,NO,1,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.2,46,07.01.2013,2
+102,3-A2-Major 02.wav,PK,NO,2,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.188,47,07.01.2013,2
+103,3-A2-Major 03.wav,PK,NO,3,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.189,48,07.01.2013,2
+104,3-A2-Major 04.wav,PK,NO,4,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.197,49,07.01.2013,2
+105,3-A2-Major 05.wav,PK,NO,5,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.2,50,07.01.2013,2
+106,3-A2-Major 06.wav,PK,NO,6,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.192,51,07.01.2013,2
+107,3-A2-Major 07.wav,PK,NO,7,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.186,52,07.01.2013,2
+108,3-A2-Major 08.wav,PK,NO,8,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.2,53,07.01.2013,2
+109,3-A2-Major 09.wav,PK,NO,9,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.2,54,07.01.2013,2
+110,3-A2-Major 10.wav,PK,NO,10,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.2,55,07.01.2013,2
+111,4-A2-Minor 00.wav,PK,NO,0,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.168,45,07.01.2013,2
+112,4-A2-Minor 01.wav,PK,NO,1,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.19,46,07.01.2013,2
+113,4-A2-Minor 02.wav,PK,NO,2,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.19,47,07.01.2013,2
+114,4-A2-Minor 03.wav,PK,NO,3,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.19,48,07.01.2013,2
+115,4-A2-Minor 04.wav,PK,NO,4,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.2,49,07.01.2013,2
+116,4-A2-Minor 05.wav,PK,NO,5,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.192,50,07.01.2013,2
+117,4-A2-Minor 06.wav,PK,NO,6,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.2,51,07.01.2013,2
+118,4-A2-Minor 07.wav,PK,NO,7,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.2,52,07.01.2013,2
+119,4-A2-Minor 08.wav,PK,NO,8,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.2,53,07.01.2013,2
+120,4-A2-Minor 09.wav,PK,NO,9,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.2,54,07.01.2013,2
+121,4-A2-Minor 10.wav,PK,NO,10,Fender Strat Clean Neck SC Chords,EGUI,2.5,0.2,55,07.01.2013,2
+122,G53-40100-1111-235.wav,PK,NO,0,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.227,40,07.01.2013,1
+123,G53-41101-1111-236.wav,PK,NO,1,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.215,41,07.01.2013,1
+124,G53-42102-1111-237.wav,PK,NO,2,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.223,42,07.01.2013,1
+125,G53-43103-1111-238.wav,PK,NO,3,Ibanez Power Strat Clean Bridge HU,EGUI,2.4999,0.227,43,07.01.2013,1
+126,G53-44104-1111-239.wav,PK,NO,4,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.223,44,07.01.2013,1
+127,G53-45105-1111-240.wav,PK,NO,5,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.223,45,07.01.2013,1
+128,G53-45200-1111-248.wav,PK,NO,0,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,45,07.01.2013,2
+129,G53-46106-1111-241.wav,PK,NO,6,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.215,46,07.01.2013,1
+130,G53-46201-1111-249.wav,PK,NO,1,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.204,46,07.01.2013,2
+131,G53-47107-1111-242.wav,PK,NO,7,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.215,47,07.01.2013,1
+132,G53-47202-1111-250.wav,PK,NO,2,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,47,07.01.2013,2
+133,G53-48108-1111-243.wav,PK,NO,8,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.227,48,07.01.2013,1
+134,G53-48203-1111-251.wav,PK,NO,3,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,48,07.01.2013,2
+135,G53-49109-1111-244.wav,PK,NO,9,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.223,49,07.01.2013,1
+136,G53-49204-1111-252.wav,PK,NO,4,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.205,49,07.01.2013,2
+137,G53-50110-1111-245.wav,PK,NO,10,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.226,50,07.01.2013,1
+138,G53-50205-1111-253.wav,PK,NO,5,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,50,07.01.2013,2
+139,G53-50300-1111-261.wav,PK,NO,0,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,50,07.01.2013,3
+140,G53-51111-1111-246.wav,PK,NO,11,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.223,51,07.01.2013,1
+141,G53-51206-1111-254.wav,PK,NO,6,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,51,07.01.2013,2
+142,G53-51301-1111-262.wav,PK,NO,1,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,51,07.01.2013,3
+143,G53-52112-1111-247.wav,PK,NO,12,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.233,52,07.01.2013,1
+144,G53-52207-1111-255.wav,PK,NO,7,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,52,07.01.2013,2
+145,G53-52302-1111-263.wav,PK,NO,2,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,52,07.01.2013,3
+146,G53-53208-1111-256.wav,PK,NO,8,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,53,07.01.2013,2
+147,G53-53303-1111-264.wav,PK,NO,3,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,53,07.01.2013,3
+148,G53-54209-1111-257.wav,PK,NO,9,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.213,54,07.01.2013,2
+149,G53-54304-1111-265.wav,PK,NO,4,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,54,07.01.2013,3
+150,G53-55210-1111-258.wav,PK,NO,10,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,55,07.01.2013,2
+151,G53-55305-1111-266.wav,PK,NO,5,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,55,07.01.2013,3
+152,G53-55400-1111-274.wav,PK,NO,0,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,55,07.01.2013,4
+153,G53-56211-1111-259.wav,PK,NO,11,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.212,56,07.01.2013,2
+154,G53-56306-1111-267.wav,PK,NO,6,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,56,07.01.2013,3
+155,G53-56401-1111-275.wav,PK,NO,1,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,56,07.01.2013,4
+156,G53-57212-1111-260.wav,PK,NO,12,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.208,57,07.01.2013,2
+157,G53-57307-1111-268.wav,PK,NO,7,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,57,07.01.2013,3
+158,G53-57402-1111-276.wav,PK,NO,2,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.202,57,07.01.2013,4
+159,G53-58308-1111-269.wav,PK,NO,8,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,58,07.01.2013,3
+160,G53-58403-1111-277.wav,PK,NO,3,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.212,58,07.01.2013,4
+161,G53-59309-1111-270.wav,PK,NO,9,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,59,07.01.2013,3
+162,G53-59404-1111-278.wav,PK,NO,4,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.202,59,07.01.2013,4
+163,G53-59500-1111-287.wav,PK,NO,0,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,59,07.01.2013,5
+164,G53-60310-1111-271.wav,PK,NO,10,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,60,07.01.2013,3
+165,G53-60405-1111-279.wav,PK,NO,5,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,60,07.01.2013,4
+166,G53-60501-1111-288.wav,PK,NO,1,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,60,07.01.2013,5
+167,G53-61311-1111-272.wav,PK,NO,11,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,61,07.01.2013,3
+168,G53-61406-1111-280.wav,PK,NO,6,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,61,07.01.2013,4
+169,G53-61502-1111-289.wav,PK,NO,2,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,61,07.01.2013,5
+170,G53-62312-1111-273.wav,PK,NO,12,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,62,07.01.2013,3
+171,G53-62407-1111-281.wav,PK,NO,7,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.2,62,07.01.2013,4
+172,G53-62503-1111-290.wav,PK,NO,3,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.224,62,07.01.2013,5
+173,G53-63408-1111-282.wav,PK,NO,8,Ibanez Power Strat Clean Bridge HU,EGUI,2.2175,0.209,63,07.01.2013,4
+174,G53-63504-1111-291.wav,PK,NO,4,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.215,63,07.01.2013,5
+175,G53-64409-1111-283.wav,PK,NO,9,Ibanez Power Strat Clean Bridge HU,EGUI,2.0047,0.2,64,07.01.2013,4
+176,G53-64505-1111-292.wav,PK,NO,5,Ibanez Power Strat Clean Bridge HU,EGUI,2.4944,0.2,64,07.01.2013,5
+177,G53-64600-1111-300.wav,PK,NO,0,Ibanez Power Strat Clean Bridge HU,EGUI,1.7262,0.2,64,07.01.2013,6
+178,G53-65410-1111-284.wav,PK,NO,10,Ibanez Power Strat Clean Bridge HU,EGUI,1.9116,0.2,65,07.01.2013,4
+179,G53-65506-1111-293.wav,PK,NO,6,Ibanez Power Strat Clean Bridge HU,EGUI,1.9671,0.202,65,07.01.2013,5
+180,G53-65601-1111-301.wav,PK,NO,1,Ibanez Power Strat Clean Bridge HU,EGUI,1.9175,0.2,65,07.01.2013,6
+181,G53-66411-1111-285.wav,PK,NO,11,Ibanez Power Strat Clean Bridge HU,EGUI,2.2083,0.202,66,07.01.2013,4
+182,G53-66507-1111-294.wav,PK,NO,7,Ibanez Power Strat Clean Bridge HU,EGUI,1.8465,0.2,66,07.01.2013,5
+183,G53-66602-1111-302.wav,PK,NO,2,Ibanez Power Strat Clean Bridge HU,EGUI,1.9497,0.207,66,07.01.2013,6
+184,G53-67412-1111-286.wav,PK,NO,12,Ibanez Power Strat Clean Bridge HU,EGUI,2.5,0.21,67,07.01.2013,4
+185,G53-67508-1111-295.wav,PK,NO,8,Ibanez Power Strat Clean Bridge HU,EGUI,2.1329,0.2,67,07.01.2013,5
+186,G53-67603-1111-303.wav,PK,NO,3,Ibanez Power Strat Clean Bridge HU,EGUI,2.026,0.224,67,07.01.2013,6
+187,G53-68509-1111-296.wav,PK,NO,9,Ibanez Power Strat Clean Bridge HU,EGUI,1.9799,0.2,68,07.01.2013,5
+188,G53-68604-1111-304.wav,PK,NO,4,Ibanez Power Strat Clean Bridge HU,EGUI,1.9817,0.2,68,07.01.2013,6
+189,G53-69510-1111-297.wav,PK,NO,10,Ibanez Power Strat Clean Bridge HU,EGUI,1.9325,0.212,69,07.01.2013,5
+190,G53-69605-1111-305.wav,PK,NO,5,Ibanez Power Strat Clean Bridge HU,EGUI,1.9739,0.2,69,07.01.2013,6
+191,G53-70511-1111-298.wav,PK,NO,11,Ibanez Power Strat Clean Bridge HU,EGUI,1.8795,0.212,70,07.01.2013,5
+192,G53-70606-1111-306.wav,PK,NO,6,Ibanez Power Strat Clean Bridge HU,EGUI,1.72,0.2,70,07.01.2013,6
+193,G53-71512-1111-299.wav,PK,NO,12,Ibanez Power Strat Clean Bridge HU,EGUI,1.6353,0.2,71,07.01.2013,5
+194,G53-71607-1111-307.wav,PK,NO,7,Ibanez Power Strat Clean Bridge HU,EGUI,1.8337,0.2,71,07.01.2013,6
+195,G53-72608-1111-308.wav,PK,NO,8,Ibanez Power Strat Clean Bridge HU,EGUI,1.6923,0.2,72,07.01.2013,6
+196,G53-73609-1111-309.wav,PK,NO,9,Ibanez Power Strat Clean Bridge HU,EGUI,1.4693,0.2,73,07.01.2013,6
+197,G53-74610-1111-310.wav,PK,NO,10,Ibanez Power Strat Clean Bridge HU,EGUI,1.526,0.202,74,07.01.2013,6
+198,G53-75611-1111-311.wav,PK,NO,11,Ibanez Power Strat Clean Bridge HU,EGUI,1.7522,0.2,75,07.01.2013,6
+199,G53-76612-1111-312.wav,PK,NO,12,Ibanez Power Strat Clean Bridge HU,EGUI,1.6015,0.2,76,07.01.2013,6
+200,1-E1-Major 00.wav,PK,NO,0,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.205,40,07.01.2013,1
+201,1-E1-Major 01.wav,PK,NO,1,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.214,41,07.01.2013,1
+202,1-E1-Major 02.wav,PK,NO,2,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.2,42,07.01.2013,1
+203,1-E1-Major 03.wav,PK,NO,3,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.198,43,07.01.2013,1
+204,1-E1-Major 04.wav,PK,NO,4,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.2,44,07.01.2013,1
+205,1-E1-Major 05.wav,PK,NO,5,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.2,45,07.01.2013,1
+206,1-E1-Major 06.wav,PK,NO,6,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.2,46,07.01.2013,1
+207,1-E1-Major 07.wav,PK,NO,7,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.2,47,07.01.2013,1
+208,1-E1-Major 08.wav,PK,NO,8,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.2,48,07.01.2013,1
+209,1-E1-Major 09.wav,PK,NO,9,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.198,49,07.01.2013,1
+210,1-E1-Major 10.wav,PK,NO,10,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.2,50,07.01.2013,1
+211,2-E1-Minor 00.wav,PK,NO,0,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.2,40,07.01.2013,1
+212,2-E1-Minor 01.wav,PK,NO,1,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.2,41,07.01.2013,1
+213,2-E1-Minor 02.wav,PK,NO,2,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.2,42,07.01.2013,1
+214,2-E1-Minor 03.wav,PK,NO,3,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.204,43,07.01.2013,1
+215,2-E1-Minor 04.wav,PK,NO,4,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.2,44,07.01.2013,1
+216,2-E1-Minor 05.wav,PK,NO,5,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.198,45,07.01.2013,1
+217,2-E1-Minor 06.wav,PK,NO,6,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.197,46,07.01.2013,1
+218,2-E1-Minor 07.wav,PK,NO,7,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.2,47,07.01.2013,1
+219,2-E1-Minor 08.wav,PK,NO,8,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.197,48,07.01.2013,1
+220,2-E1-Minor 09.wav,PK,NO,9,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.198,49,07.01.2013,1
+221,2-E1-Minor 10.wav,PK,NO,10,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.198,50,07.01.2013,1
+222,3-A2-Major 00.wav,PK,NO,0,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.199,45,07.01.2013,2
+223,3-A2-Major 01.wav,PK,NO,1,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.198,46,07.01.2013,2
+224,3-A2-Major 02.wav,PK,NO,2,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.198,47,07.01.2013,2
+225,3-A2-Major 03.wav,PK,NO,3,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.2,48,07.01.2013,2
+226,3-A2-Major 04.wav,PK,NO,4,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.198,49,07.01.2013,2
+227,3-A2-Major 05.wav,PK,NO,5,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.2,50,07.01.2013,2
+228,3-A2-Major 06.wav,PK,NO,6,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.2,51,07.01.2013,2
+229,3-A2-Major 07.wav,PK,NO,7,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.198,52,07.01.2013,2
+230,3-A2-Major 08.wav,PK,NO,8,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.197,53,07.01.2013,2
+231,3-A2-Major 09.wav,PK,NO,9,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.2,54,07.01.2013,2
+232,3-A2-Major 10.wav,PK,NO,10,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.2,55,07.01.2013,2
+233,4-A2-Minor 00.wav,PK,NO,0,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.198,45,07.01.2013,2
+234,4-A2-Minor 01.wav,PK,NO,1,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.198,46,07.01.2013,2
+235,4-A2-Minor 02.wav,PK,NO,2,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.192,47,07.01.2013,2
+236,4-A2-Minor 03.wav,PK,NO,3,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.2,48,07.01.2013,2
+237,4-A2-Minor 04.wav,PK,NO,4,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.198,49,07.01.2013,2
+238,4-A2-Minor 05.wav,PK,NO,5,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.193,50,07.01.2013,2
+239,4-A2-Minor 06.wav,PK,NO,6,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.2,51,07.01.2013,2
+240,4-A2-Minor 07.wav,PK,NO,7,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.2,52,07.01.2013,2
+241,4-A2-Minor 08.wav,PK,NO,8,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.2,53,07.01.2013,2
+242,4-A2-Minor 09.wav,PK,NO,9,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.2,54,07.01.2013,2
+243,4-A2-Minor 10.wav,PK,NO,10,Ibanez Power Strat Clean Bridge HU Chords,EGUI,2.5,0.198,55,07.01.2013,2
+244,G53-40100-1111-157.wav,PK,NO,0,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.227,40,07.01.2013,1
+245,G53-41101-1111-158.wav,PK,NO,1,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.226,41,07.01.2013,1
+246,G53-42102-1111-159.wav,PK,NO,2,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,42,07.01.2013,1
+247,G53-43103-1111-160.wav,PK,NO,3,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.221,43,07.01.2013,1
+248,G53-44104-1111-161.wav,PK,NO,4,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.237,44,07.01.2013,1
+249,G53-45105-1111-162.wav,PK,NO,5,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,45,07.01.2013,1
+250,G53-45200-1111-170.wav,PK,NO,0,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,45,07.01.2013,2
+251,G53-46106-1111-163.wav,PK,NO,6,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.204,46,07.01.2013,1
+252,G53-46201-1111-171.wav,PK,NO,1,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,46,07.01.2013,2
+253,G53-47107-1111-164.wav,PK,NO,7,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.214,47,07.01.2013,1
+254,G53-47202-1111-172.wav,PK,NO,2,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,47,07.01.2013,2
+255,G53-48108-1111-165.wav,PK,NO,8,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,48,07.01.2013,1
+256,G53-48203-1111-173.wav,PK,NO,3,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,48,07.01.2013,2
+257,G53-49109-1111-166.wav,PK,NO,9,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,49,07.01.2013,1
+258,G53-49204-1111-174.wav,PK,NO,4,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,49,07.01.2013,2
+259,G53-50110-1111-167.wav,PK,NO,10,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.4849,0.216,50,07.01.2013,1
+260,G53-50205-1111-175.wav,PK,NO,5,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,50,07.01.2013,2
+261,G53-50300-1111-183.wav,PK,NO,0,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,50,07.01.2013,3
+262,G53-51111-1111-168.wav,PK,NO,11,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.214,51,07.01.2013,1
+263,G53-51206-1111-176.wav,PK,NO,6,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.3766,0.2,51,07.01.2013,2
+264,G53-51301-1111-184.wav,PK,NO,1,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,51,07.01.2013,3
+265,G53-52112-1111-169.wav,PK,NO,12,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,52,07.01.2013,1
+266,G53-52207-1111-177.wav,PK,NO,7,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,52,07.01.2013,2
+267,G53-52302-1111-185.wav,PK,NO,2,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,52,07.01.2013,3
+268,G53-53208-1111-178.wav,PK,NO,8,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,53,07.01.2013,2
+269,G53-53303-1111-186.wav,PK,NO,3,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,53,07.01.2013,3
+270,G53-54209-1111-179.wav,PK,NO,9,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,54,07.01.2013,2
+271,G53-54304-1111-187.wav,PK,NO,4,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,54,07.01.2013,3
+272,G53-55210-1111-180.wav,PK,NO,10,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,55,07.01.2013,2
+273,G53-55305-1111-188.wav,PK,NO,5,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,55,07.01.2013,3
+274,G53-55400-1111-196.wav,PK,NO,0,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,55,07.01.2013,4
+275,G53-56211-1111-181.wav,PK,NO,11,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,56,07.01.2013,2
+276,G53-56306-1111-189.wav,PK,NO,6,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,56,07.01.2013,3
+277,G53-56401-1111-197.wav,PK,NO,1,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.207,56,07.01.2013,4
+278,G53-57212-1111-182.wav,PK,NO,12,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,57,07.01.2013,2
+279,G53-57307-1111-190.wav,PK,NO,7,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,57,07.01.2013,3
+280,G53-57402-1111-198.wav,PK,NO,2,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,57,07.01.2013,4
+281,G53-58308-1111-191.wav,PK,NO,8,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,58,07.01.2013,3
+282,G53-58403-1111-199.wav,PK,NO,3,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,58,07.01.2013,4
+283,G53-59309-1111-192.wav,PK,NO,9,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,59,07.01.2013,3
+284,G53-59404-1111-200.wav,PK,NO,4,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,59,07.01.2013,4
+285,G53-59500-1111-209.wav,PK,NO,0,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.206,59,07.01.2013,5
+286,G53-60310-1111-193.wav,PK,NO,10,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,60,07.01.2013,3
+287,G53-60405-1111-201.wav,PK,NO,5,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,60,07.01.2013,4
+288,G53-60501-1111-210.wav,PK,NO,1,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,60,07.01.2013,5
+289,G53-61311-1111-194.wav,PK,NO,11,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,61,07.01.2013,3
+290,G53-61406-1111-202.wav,PK,NO,6,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,61,07.01.2013,4
+291,G53-61502-1111-211.wav,PK,NO,2,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.204,61,07.01.2013,5
+292,G53-62312-1111-195.wav,PK,NO,12,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,62,07.01.2013,3
+293,G53-62407-1111-203.wav,PK,NO,7,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.207,62,07.01.2013,4
+294,G53-62503-1111-212.wav,PK,NO,3,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.217,62,07.01.2013,5
+295,G53-63408-1111-204.wav,PK,NO,8,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.3149,0.2,63,07.01.2013,4
+296,G53-63504-1111-213.wav,PK,NO,4,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.205,63,07.01.2013,5
+297,G53-64409-1111-205.wav,PK,NO,9,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,1.6797,0.2,64,07.01.2013,4
+298,G53-64505-1111-214.wav,PK,NO,5,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.3885,0.207,64,07.01.2013,5
+299,G53-64600-1111-222.wav,PK,NO,0,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.367,0.2,64,07.01.2013,6
+300,G53-65410-1111-206.wav,PK,NO,10,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.0883,0.2,65,07.01.2013,4
+301,G53-65506-1111-215.wav,PK,NO,6,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.1448,0.2,65,07.01.2013,5
+302,G53-65601-1111-223.wav,PK,NO,1,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.1539,0.205,65,07.01.2013,6
+303,G53-66411-1111-207.wav,PK,NO,11,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.1081,0.219,66,07.01.2013,4
+304,G53-66507-1111-216.wav,PK,NO,7,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.4598,0.2,66,07.01.2013,5
+305,G53-66602-1111-224.wav,PK,NO,2,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,1.9287,0.208,66,07.01.2013,6
+306,G53-67412-1111-208.wav,PK,NO,12,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,67,07.01.2013,4
+307,G53-67508-1111-217.wav,PK,NO,8,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.5,0.2,67,07.01.2013,5
+308,G53-67603-1111-225.wav,PK,NO,3,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.4234,0.2,67,07.01.2013,6
+309,G53-68509-1111-218.wav,PK,NO,9,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.1538,0.2,68,07.01.2013,5
+310,G53-68604-1111-226.wav,PK,NO,4,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.3793,0.2,68,07.01.2013,6
+311,G53-69510-1111-219.wav,PK,NO,10,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,1.8513,0.207,69,07.01.2013,5
+312,G53-69605-1111-227.wav,PK,NO,5,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.1525,0.206,69,07.01.2013,6
+313,G53-70511-1111-220.wav,PK,NO,11,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.2144,0.2,70,07.01.2013,5
+314,G53-70606-1111-228.wav,PK,NO,6,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.1916,0.2,70,07.01.2013,6
+315,G53-71512-1111-221.wav,PK,NO,12,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.0678,0.211,71,07.01.2013,5
+316,G53-71607-1111-229.wav,PK,NO,7,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.2394,0.2,71,07.01.2013,6
+317,G53-72608-1111-230.wav,PK,NO,8,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,2.1668,0.222,72,07.01.2013,6
+318,G53-73609-1111-231.wav,PK,NO,9,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,1.4448,0.2,73,07.01.2013,6
+319,G53-74610-1111-232.wav,PK,NO,10,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,1.4669,0.2,74,07.01.2013,6
+320,G53-75611-1111-233.wav,PK,NO,11,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,1.9764,0.212,75,07.01.2013,6
+321,G53-76612-1111-234.wav,PK,NO,12,Ibanez Power Strat Clean Bridge+Neck SC,EGUI,1.8713,0.2,76,07.01.2013,6
+322,G53-40100-1111-00079.wav,PK,NO,0,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.227,40,07.01.2013,1
+323,G53-41101-1111-00080.wav,PK,NO,1,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.236,41,07.01.2013,1
+324,G53-42102-1111-00081.wav,PK,NO,2,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.225,42,07.01.2013,1
+325,G53-43103-1111-00082.wav,PK,NO,3,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.219,43,07.01.2013,1
+326,G53-44104-1111-00083.wav,PK,NO,4,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.219,44,07.01.2013,1
+327,G53-45105-1111-00084.wav,PK,NO,5,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.225,45,07.01.2013,1
+328,G53-45200-1111-00092.wav,PK,NO,0,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.21,45,07.01.2013,2
+329,G53-46106-1111-00085.wav,PK,NO,6,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.225,46,07.01.2013,1
+330,G53-46201-1111-00093.wav,PK,NO,1,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.238,46,07.01.2013,2
+331,G53-47107-1111-00086.wav,PK,NO,7,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.232,47,07.01.2013,1
+332,G53-47202-1111-00094.wav,PK,NO,2,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.2,47,07.01.2013,2
+333,G53-48108-1111-00087.wav,PK,NO,8,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.236,48,07.01.2013,1
+334,G53-48203-1111-00095.wav,PK,NO,3,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.2,48,07.01.2013,2
+335,G53-49109-1111-00088.wav,PK,NO,9,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.232,49,07.01.2013,1
+336,G53-49204-1111-00096.wav,PK,NO,4,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.2,49,07.01.2013,2
+337,G53-50110-1111-00089.wav,PK,NO,10,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.219,50,07.01.2013,1
+338,G53-50205-1111-00097.wav,PK,NO,5,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.2,50,07.01.2013,2
+339,G53-50300-1111-00105.wav,PK,NO,0,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.2,50,07.01.2013,3
+340,G53-51111-1111-00090.wav,PK,NO,11,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.224,51,07.01.2013,1
+341,G53-51206-1111-00098.wav,PK,NO,6,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.226,51,07.01.2013,2
+342,G53-51301-1111-00106.wav,PK,NO,1,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.237,51,07.01.2013,3
+343,G53-52112-1111-00091.wav,PK,NO,12,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.217,52,07.01.2013,1
+344,G53-52207-1111-00099.wav,PK,NO,7,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.228,52,07.01.2013,2
+345,G53-52302-1111-00107.wav,PK,NO,2,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.2,52,07.01.2013,3
+346,G53-53208-1111-00100.wav,PK,NO,8,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.238,53,07.01.2013,2
+347,G53-53303-1111-00108.wav,PK,NO,3,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.2,53,07.01.2013,3
+348,G53-54209-1111-00101.wav,PK,NO,9,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.221,54,07.01.2013,2
+349,G53-54304-1111-00109.wav,PK,NO,4,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.204,54,07.01.2013,3
+350,G53-55210-1111-00102.wav,PK,NO,10,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.226,55,07.01.2013,2
+351,G53-55305-1111-00110.wav,PK,NO,5,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.2,55,07.01.2013,3
+352,G53-55400-1111-00118.wav,PK,NO,0,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.214,55,07.01.2013,4
+353,G53-56211-1111-00103.wav,PK,NO,11,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.205,56,07.01.2013,2
+354,G53-56306-1111-00111.wav,PK,NO,6,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.2,56,07.01.2013,3
+355,G53-56401-1111-00119.wav,PK,NO,1,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.21,56,07.01.2013,4
+356,G53-57212-1111-00104.wav,PK,NO,12,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.212,57,07.01.2013,2
+357,G53-57307-1111-00112.wav,PK,NO,7,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.2,57,07.01.2013,3
+358,G53-57402-1111-00120.wav,PK,NO,2,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.24,57,07.01.2013,4
+359,G53-58308-1111-00113.wav,PK,NO,8,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.2,58,07.01.2013,3
+360,G53-58403-1111-00121.wav,PK,NO,3,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.214,58,07.01.2013,4
+361,G53-59309-1111-00114.wav,PK,NO,9,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.205,59,07.01.2013,3
+362,G53-59404-1111-00122.wav,PK,NO,4,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.204,59,07.01.2013,4
+363,G53-59500-1111-00131.wav,PK,NO,0,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.2,59,07.01.2013,5
+364,G53-60310-1111-00115.wav,PK,NO,10,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.206,60,07.01.2013,3
+365,G53-60405-1111-00123.wav,PK,NO,5,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.218,60,07.01.2013,4
+366,G53-60501-1111-00132.wav,PK,NO,1,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.2,60,07.01.2013,5
+367,G53-61311-1111-00116.wav,PK,NO,11,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.209,61,07.01.2013,3
+368,G53-61406-1111-00124.wav,PK,NO,6,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.205,61,07.01.2013,4
+369,G53-61502-1111-00133.wav,PK,NO,2,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.2,61,07.01.2013,5
+370,G53-62312-1111-00117.wav,PK,NO,12,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.206,62,07.01.2013,3
+371,G53-62407-1111-00125.wav,PK,NO,7,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.205,62,07.01.2013,4
+372,G53-62503-1111-00134.wav,PK,NO,3,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.213,62,07.01.2013,5
+373,G53-63408-1111-00126.wav,PK,NO,8,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.211,63,07.01.2013,4
+374,G53-63504-1111-00135.wav,PK,NO,4,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.208,63,07.01.2013,5
+375,G53-64409-1111-00127.wav,PK,NO,9,Ibanez Power Strat Clean Neck HU,EGUI,2.1363,0.205,64,07.01.2013,4
+376,G53-64505-1111-00136.wav,PK,NO,5,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.218,64,07.01.2013,5
+377,G53-64600-1111-00144.wav,PK,NO,0,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.2,64,07.01.2013,6
+378,G53-65410-1111-00128.wav,PK,NO,10,Ibanez Power Strat Clean Neck HU,EGUI,2.2703,0.212,65,07.01.2013,4
+379,G53-65506-1111-00137.wav,PK,NO,6,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.2,65,07.01.2013,5
+380,G53-65601-1111-00145.wav,PK,NO,1,Ibanez Power Strat Clean Neck HU,EGUI,2.4223,0.2,65,07.01.2013,6
+381,G53-66411-1111-00129.wav,PK,NO,11,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.233,66,07.01.2013,4
+382,G53-66507-1111-00138.wav,PK,NO,7,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.203,66,07.01.2013,5
+383,G53-66602-1111-00146.wav,PK,NO,2,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.215,66,07.01.2013,6
+384,G53-67412-1111-00130.wav,PK,NO,12,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.215,67,07.01.2013,4
+385,G53-67508-1111-00139.wav,PK,NO,8,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.209,67,07.01.2013,5
+386,G53-67603-1111-00147.wav,PK,NO,3,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.202,67,07.01.2013,6
+387,G53-68509-1111-00140.wav,PK,NO,9,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.241,68,07.01.2013,5
+388,G53-68604-1111-00148.wav,PK,NO,4,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.2,68,07.01.2013,6
+389,G53-69510-1111-00141.wav,PK,NO,10,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.207,69,07.01.2013,5
+390,G53-69605-1111-00149.wav,PK,NO,5,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.2,69,07.01.2013,6
+391,G53-70511-1111-00142.wav,PK,NO,11,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.204,70,07.01.2013,5
+392,G53-70606-1111-00150.wav,PK,NO,6,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.213,70,07.01.2013,6
+393,G53-71512-1111-00143.wav,PK,NO,12,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.2,71,07.01.2013,5
+394,G53-71607-1111-00151.wav,PK,NO,7,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.217,71,07.01.2013,6
+395,G53-72608-1111-00152.wav,PK,NO,8,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.2,72,07.01.2013,6
+396,G53-73609-1111-00153.wav,PK,NO,9,Ibanez Power Strat Clean Neck HU,EGUI,1.9212,0.203,73,07.01.2013,6
+397,G53-74610-1111-00154.wav,PK,NO,10,Ibanez Power Strat Clean Neck HU,EGUI,2.3636,0.212,74,07.01.2013,6
+398,G53-75611-1111-00155.wav,PK,NO,11,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.202,75,07.01.2013,6
+399,G53-76612-1111-00156.wav,PK,NO,12,Ibanez Power Strat Clean Neck HU,EGUI,2.5,0.2,76,07.01.2013,6
