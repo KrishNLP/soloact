@@ -1,7 +1,7 @@
-Untitled
+PROJECT TITLE <TO DO>
 ==============================
 
-VAES
+ABSTRACT <TO DO>
 
 Project Organization
 ------------
