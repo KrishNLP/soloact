@@ -9,7 +9,9 @@ import os
 import re
 import json
 
-# UTILITY
+# ###########################
+# #         UTILTY        # # 
+# ###########################
 
 def flatten(x, par = '', sep ='.'):
     """Flatten joining parent keys with dot"""
@@ -152,71 +154,73 @@ def sound_factory(soundfiles, batch_size, augment_n, effects, exercise, path = N
 # EFFECTS CONSTRAINT, only overdrive gain is randomized in this exercise - 
 # we like the other effects to model typical user behaviour 
 
-effects = {
-    'overdrive' :  {'gain' : (10,80), 'colour' :  (0,20)}, # these are really the only two we randomize
-    'reverb': {
-            'reverberance' : (0,100),
-            'hf_damping': 50,
-            'pre_delay': 20,
-            'reverberance': 50,
-            'room_scale': 100,
-            'stereo_depth': 100,
-            'wet_gain': 0,
-            'wet_only': False
-                },
-    'delay' :
-            {'decays': [0.3, 0.25],
-             'delays': [1000, 1800],
-             'gain_in': 0.8,
-             'gain_out': 0.5,
-             'parallel': False}
-}
+# effects = {
+#     'overdrive' :  {'gain' : (10,80), 'colour' :  (0,20)}, # these are really the only two we randomize
+#     'reverb': {
+#             'reverberance' : (0,100),
+#             'hf_damping': 50,
+#             'pre_delay': 20,
+#             'reverberance': 50,
+#             'room_scale': 100,
+#             'stereo_depth': 100,
+#             'wet_gain': 0,
+#             'wet_only': False
+#                 },
+#     'delay' :
+#             {'decays': [0.3, 0.25],
+#              'delays': [1000, 1800],
+#              'gain_in': 0.8,
+#              'gain_out': 0.5,
+#              'parallel': False}
+# }
 
+# # Which effects we want randomized if regression
+# effects_to_randomize = {'overdrive': ['gain', 'colour']}
+# # Which should remain constant if classification
+# effects_to_steady = {'overdrive': ['gain']} # 
+import yaml 
 
-# Which effects we want randomized if regression
-effects_to_randomize = {'overdrive': ['gain', 'colour']}
-# Which should remain constant if classification
-effects_to_steady = {'overdrive': ['gain']} # 
+effects = yaml.load(open('config.yaml', 'r'))
 
-pipeline_settings = {
-    'effects' : effects,
-    'exercise' : 'classification',
-    'batch_size': 1, # number of audio tracks taken as part of a batch
-    'augment_n' : 5 # number of augmentations per track
-}
+# pipeline_settings = {
+#     'effects' : effects,
+#     'exercise' : 'classification',
+#     'batch_size': 1, # number of audio tracks taken as part of a batch
+#     'augment_n' : 5 # number of augmentations per track
+# }
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
-    _, *soundfiles = sys.argv
+#     _, *soundfiles = sys.argv
 
-    # modify batch size to match files introduced
-    pipeline_settings['batch_size'] = len(soundfiles)
+#     # modify batch size to match files introduced
+#     pipeline_settings['batch_size'] = len(soundfiles)
 
-    print (
-        'Anticipated number of examples: {}'.format(
-        pipeline_settings.get('batch_size') * pipeline_settings.get('augment_n')))
+#     print (
+#         'Anticipated number of examples: {}'.format(
+#         pipeline_settings.get('batch_size') * pipeline_settings.get('augment_n')))
 
-    print ('*' * 50)
+#     print ('*' * 50)
 
-    soundfiles_arg = soundfiles if isinstance(soundfiles, list) else [soundfiles]
+#     soundfiles_arg = soundfiles if isinstance(soundfiles, list) else [soundfiles]
 
-    train_generator = sound_factory(soundfiles = soundfiles_arg, **pipeline_settings)
+#     train_generator = sound_factory(soundfiles = soundfiles_arg, **pipeline_settings)
 
-    train_X, train_Y = next(train_generator)
+#     train_X, train_Y = next(train_generator)
 
-    dt = datetime.now().strftime('%Y-%m-%d')
+#     dt = datetime.now().strftime('%Y-%m-%d')
 
-    filenames = {
-            'x' : dt + '_train_X_' + pipeline_settings.get('exercise') + '.npy',
-            'y' : dt + '_train_Y_' + pipeline_settings.get('exercise') + '.csv'
-    }
+#     filenames = {
+#             'x' : dt + '_train_X_' + pipeline_settings.get('exercise') + '.npy',
+#             'y' : dt + '_train_Y_' + pipeline_settings.get('exercise') + '.csv'
+#     }
 
-    print ('SAVING TO THE FOLLOWING FILES!\n')
-    print (json.dumps(filenames, indent = 4))
+#     print ('SAVING TO THE FOLLOWING FILES!\n')
+#     print (json.dumps(filenames, indent = 4))
 
-    print ('Saving samples and labels!')
+#     print ('Saving samples and labels!')
 
-    np.save(filenames.get('x'), train_X)
+#     np.save(filenames.get('x'), train_X)
 
-    train_Y.to_csv(open(filenames.get('y'), 'w'))
+#     train_Y.to_csv(open(filenames.get('y'), 'w'))
 
