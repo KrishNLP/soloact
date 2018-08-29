@@ -158,7 +158,7 @@ def pad(l_arrays):
 	return batch_x
 
 
-def augment_track(file, effects,
+def augment_track(file, n, effects,
 			   exercise = 'regression',
 			   sustain = ['overdrive', 'reverb'],
 			   write = False
@@ -227,19 +227,20 @@ def augment_track(file, effects,
 
 	if write is not False:
 		# outputs augmented tracks to desired folder ignoring feature extraction pipleine
-		FX.build(file, os.path.join(write, file.split('/')[-1]))
+		FX.build(file, os.path.join(write, file.split('/')[-2], str(n) + '_' + file.split('/')[-1]))
 
-	else:
-		with tempfile.NamedTemporaryFile(suffix = '.wav') as tmp:
-			# pysox doesn't have output to array, save to temp file and reload as array with librosa
-			FX.build(file, tmp.name)
-			array, sr = librosa.load(tmp.name, sr = 41000)
-			FX.clear_effects()
-			# return data with feature extraction
-			return flatten(labels), feature_pipeline(array)
+	with tempfile.NamedTemporaryFile(suffix = '.wav') as tmp:
+		# pysox doesn't have output to array, save to temp file and reload as array with librosa
+		FX.build(file, tmp.name)
+		array, sr = librosa.load(tmp.name, sr = 41000)
+		FX.clear_effects()
+		# return data with feature extraction
+		flattened_labels = flatten(labels)
+		flattened_labels['group'] = n
+		return flattened_labels, feature_pipeline(array)
 
 def augment_data(subsample = False, n_augment = 1,
-			write_with_effects = False, write_training = False, source = 'power'):
+			write_with_effects = False, make_training_set = False, source = 'power'):
 	"""
 	Augmentation pipeline with options to subsample or write augmented data
 
@@ -260,6 +261,7 @@ def augment_data(subsample = False, n_augment = 1,
 	"""
 
 	DATA_DIR = '../../data/'
+	INTERIM_DIR = DATA_DIR + 'interim/'
 
 	# NOTES OR CHORDS?
 	SOURCES = {
@@ -311,10 +313,8 @@ def augment_data(subsample = False, n_augment = 1,
 	# REPLACE
 	augmentation_config['effects'] = effects
 
-	if write_with_effects is not False:
+	if write_with_effects:
 
-		INTERIM_DIR = DATA_DIR + 'interim/'
-		# top level folder path
 		OUT_DIR = os.path.join(INTERIM_DIR, write_with_effects) + '_' + STYLE
 
 		print ('Are you sure you want to {} files to "{}"?'.format(
@@ -331,52 +331,38 @@ def augment_data(subsample = False, n_augment = 1,
 		else:
 			sys.exit('Operation cancelled')
 
-		for sf in train_soundfiles:
+	store_all = []
 
-			for i in range(n_augment):
+	for sf in train_soundfiles:
 
-				augment_track(sf, **augmentation_config) # call without store
+		for i in range(n_augment):
 
-		print ('Wrote augmented tracks to {}'.format(OUT_DIR))
+			store_all.append(augment_track(sf, n = i, **augmentation_config))
 
-	else:
+	labels, features = zip(*store_all)
+	all_features = [np.expand_dims(x, axis = 1) for x in features]
+	X_train = pad(all_features)
+	Y_train = pd.DataFrame(list(labels))
+	# add guitar kind and chord
+	def gt(x, ix): return x.split('/')[ix]
 
-		all_features = []
-		all_labels = []
-
-		store_all = []
-
-		for sf in train_soundfiles:
-
-			for i in range(n_augment):
-
-				store_all.append(augment_track(sf, **augmentation_config))
-
-		labels, features = zip(*store_all)
-		all_labels = all_labels + list(labels)
-		all_features = all_features + list(features)
-
-		all_features = [np.expand_dims(x, axis = 1) for x in all_features]
-		X_train = pad(all_features)
-		Y_train = pd.DataFrame(all_labels)
-		# add guitar kind and chord
-		def gt(x, ix): return x.split('/')[ix]
-
-		# get models and chords (ordered)
-		file_meta = [(gt(x, ix = -2), gt(x, ix = -1).rstrip('.wav')) for x in train_soundfiles]
-		models, chordnames = zip(*file_meta)
-		# repeat sequence by number of augmentations
-		models = list(itertools.chain.from_iterable([[m] * n_augment for m in models]))
-		chordnames = list(itertools.chain.from_iterable([[m] * n_augment for m in chordnames]))
-		Y_train['model'] = pd.Series(models)
-		Y_train['chords'] = pd.Series(chordnames)
-
-		if write_training is True:
-			processed_dir = os.path.abspath(DATA_DIR) + '/processed/'
-			# OVERWRITES EXISTING TRAINING DATA
-			np.save(processed_dir + 'training_X_' + STYLE, arr =  X_train)
-			Y_train.to_csv(open(processed_dir + 'training_Y_' + STYLE  + '.csv', 'w'))
-			print ('Wrote training data to "{}"'.format(processed_dir))
-			return ''
-		#
-		return X_train, Y_train
+	# get models and chords (ordered)
+	file_meta = [(gt(x, ix = -2 if STYLE == 'pw' else -3), gt(x, ix = -1).rstrip('.wav')) for x in train_soundfiles]
+	models, chordnames = zip(*file_meta)
+	# repeat sequence by number of augmentations
+	models = list(itertools.chain.from_iterable([[m] * n_augment for m in models]))
+	chordnames = list(itertools.chain.from_iterable([[m] * n_augment for m in chordnames]))
+	Y_train['model'] = pd.Series(models)
+	Y_train['chords'] = pd.Series(chordnames)
+#
+	if make_training_set is True:
+		processed_dir = os.path.abspath(DATA_DIR) + '/processed/'
+		# OVERWRITES EXISTING TRAINING DATA
+		np.save(processed_dir + 'training_X_' + STYLE, arr =  X_train)
+		Y_train.to_csv(open(processed_dir + 'training_Y_' + STYLE  + '.csv', 'w'))
+		print ('Wrote training data to "{}"'.format(processed_dir))
+		return ''
+	#
+	return X_train, Y_train
+#
+augment_data(source = 'power', make_training_set =  True, n_augment = 3, subsample = 5)
