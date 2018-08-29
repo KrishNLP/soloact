@@ -227,7 +227,10 @@ def augment_track(file, n, effects,
 
 	if write is not False:
 		# outputs augmented tracks to desired folder ignoring feature extraction pipleine
-		FX.build(file, os.path.join(write, file.split('/')[-2], str(n) + '_' + file.split('/')[-1]))
+		model = file.split('/')[-2] if '/audio/' not in file else file.split('/')[-3]
+		outfile = os.path.join(write, model, str(n) + '_' + file.split('/')[-1])
+		# print (outfile)
+		FX.build(file, outfile)
 
 	with tempfile.NamedTemporaryFile(suffix = '.wav') as tmp:
 		# pysox doesn't have output to array, save to temp file and reload as array with librosa
@@ -365,4 +368,4 @@ def augment_data(subsample = False, n_augment = 1,
 	#
 	return X_train, Y_train
 #
-augment_data(source = 'power', make_training_set =  True, n_augment = 3, subsample = 5)
+augment_data(source = 'else', make_training_set =  True, n_augment = 3, subsample = 5, write_with_effects = 'horse')
