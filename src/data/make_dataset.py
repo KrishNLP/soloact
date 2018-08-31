@@ -243,7 +243,7 @@ def augment_track(file, n, effects,
 		return flattened_labels, feature_pipeline(array)
 
 def augment_data(subsample = False, n_augment = 1,
-			write_with_effects = False, make_training_set = False, source = 'power'):
+			write_with_effects_to = False, make_training_set = False, source = 'power'):
 	"""
 	Augmentation pipeline with options to subsample or write augmented data
 
@@ -263,21 +263,33 @@ def augment_data(subsample = False, n_augment = 1,
 
 	"""
 
-	DATA_DIR = '../../data/'
-	INTERIM_DIR = DATA_DIR + 'interim/'
+	DATA_DIR = os.path.abspath('../../data/') + '/'
+	INTERIM_DIR = DATA_DIR + '/interim/'
+
+	# strategies = {
+	#     'power': ('powerchords', 'power_strat.yaml'),
+	#     'septa' : ('septachords', 'septa_strat.yaml'),
+	#     'triad' : ('triad', 'triad_strat.yaml')
+	# }
 
 	# NOTES OR CHORDS?
 	SOURCES = {
-				"pw" : {
+				"power" : {
 							'trace' : DATA_DIR + 'interim/powerchords/',
+							'ext': ''},
+
+				"septa" : {
+							'trace' : DATA_DIR + 'interim/septachords/',
+							'ext': ''},
+				"triad" : {
+							'trace' : DATA_DIR + 'interim/triad/',
 							'ext': ''},
 				"sn" : {
 						'trace' : DATA_DIR + 'raw/IDMT-SMT-GUITAR_V2/dataset1/',
 						'ext' : 'audio/'}
-			}
+}
 
-	STYLE = 'pw' if source == 'power' else 'sn'
-	TRACK_KIND = SOURCES[STYLE] # note or chord
+	TRACK_KIND = SOURCES[source] # note or chord
 	SOURCE_DIR = TRACK_KIND['trace']
 
 	config = 'config.yaml'
@@ -292,13 +304,12 @@ def augment_data(subsample = False, n_augment = 1,
 	# NOT GENERATING THIS, HOLDING OUT UNTIL WE HAVE USEFUL WORKING MODELS
 	use_models_test = pipeline_config['test_models']
 
-	# FULL PATHS
 	train_soundfiles = [
 					glob.glob(os.path.join(SOURCE_DIR, mod, TRACK_KIND.get('ext')) + '/*.wav')
 						for mod in use_models_train]
 
 	train_soundfiles = list(itertools.chain.from_iterable(train_soundfiles))
-
+#
 	if subsample is not False:
 		print ('Subsampling {} files from {} available'.format(subsample, len(train_soundfiles)))
 		train_soundfiles = random.choices(population = train_soundfiles, k = subsample)
@@ -316,9 +327,9 @@ def augment_data(subsample = False, n_augment = 1,
 	# REPLACE
 	augmentation_config['effects'] = effects
 
-	if write_with_effects:
+	if write_with_effects_to:
 
-		OUT_DIR = os.path.join(INTERIM_DIR, write_with_effects) + '_' + STYLE
+		OUT_DIR = os.path.join(INTERIM_DIR, write_with_effects_to) + '_' + source.upper()
 
 		print ('Are you sure you want to {} files to "{}"?'.format(
 				len(train_soundfiles) * n_augment, OUT_DIR))
@@ -339,7 +350,6 @@ def augment_data(subsample = False, n_augment = 1,
 	for sf in train_soundfiles:
 
 		for i in range(n_augment):
-
 			store_all.append(augment_track(sf, n = i, **augmentation_config))
 
 	labels, features = zip(*store_all)
@@ -350,7 +360,7 @@ def augment_data(subsample = False, n_augment = 1,
 	def gt(x, ix): return x.split('/')[ix]
 
 	# get models and chords (ordered)
-	file_meta = [(gt(x, ix = -2 if STYLE == 'pw' else -3), gt(x, ix = -1).rstrip('.wav')) for x in train_soundfiles]
+	file_meta = [(gt(x, ix = -2 if source != 'sn' else -3), gt(x, ix = -1).rstrip('.wav')) for x in train_soundfiles]
 	models, chordnames = zip(*file_meta)
 	# repeat sequence by number of augmentations
 	models = list(itertools.chain.from_iterable([[m] * n_augment for m in models]))
@@ -361,11 +371,11 @@ def augment_data(subsample = False, n_augment = 1,
 	if make_training_set is True:
 		processed_dir = os.path.abspath(DATA_DIR) + '/processed/'
 		# OVERWRITES EXISTING TRAINING DATA
-		np.save(processed_dir + 'training_X_' + STYLE, arr =  X_train)
-		Y_train.to_csv(open(processed_dir + 'training_Y_' + STYLE  + '.csv', 'w'))
+		np.save(processed_dir + 'training_X_' + source, arr =  X_train)
+		Y_train.to_csv(open(processed_dir + 'training_Y_' + source  + '.csv', 'w'))
 		print ('Wrote training data to "{}"'.format(processed_dir))
 		return ''
 	#
 	return X_train, Y_train
 #
-augment_data(source = 'else', make_training_set =  True, n_augment = 3, subsample = 5, write_with_effects = 'horse')
+augment_data(source = 'power', make_training_set =  True, n_augment = 1, write_with_effects_to =  'pwtester', subsample = 5)

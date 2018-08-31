@@ -1,17 +1,12 @@
-from setuptools import find_packages, setup
 import os
 import yaml
-
-
 import xml.etree.ElementTree as ET
 import pandas as pd
-import os
-from sklearn.model_selection import train_test_split
 import json
-from datetime import datetime
 import fnmatch
-import sox
 import glob
+import argparse
+import sox
 
 ROOT_DIR = os.getcwd() + '/'
 DATA_RAW = 'data/raw/IDMT-SMT-GUITAR_V2/dataset1'
@@ -61,49 +56,57 @@ def write_annotation():
     print ('Completed write to "{}"'.format(filename))
     return ''
 
-import sox
+strategies = {
+    'power': ('powerchords', 'power_strat.yaml'),
+    'septa' : ('septachords', 'septa_strat.yaml'),
+    'triad' : ('triad', 'triad_strat.yaml')
+}
 
-def make_powerchords():
+def write_chords(strategy = 'power', write = False):
 
-    annotations = ROOT_DIR + 'data/interim/file_meta.csv'
-    powerchords_path = ROOT_DIR + 'data/interim/powerchords'
-    try:
-        annotations_df = pd.read_csv(annotations)
-    except:
-        write_annotation()
-        annotations_df =  pd.read_csv(annotations)
+    # indexed_strategies = list(enumerate(list(strategies.keys())))
+
+    assert strategy in strategies, '{} is not a valid strategy'.format(strategy)
+
+    bp = os.path.abspath(os.path.join(ROOT_DIR,'data/interim/'))
+    annotations = bp  + '/file_meta.csv'
+    annotations_df = pd.read_csv(annotations, index_col = 0)
+
+    chord_dir, strat_fn = strategies.get(strategy)
+    strat_config = yaml.load(open(strat_fn, 'r'))
+    strategy_path = os.path.abspath(os.path.join(bp, chord_dir))
 
     records = annotations_df.set_index(['guitarModel', 'pitch'])['audioFileName'].to_dict()
-    sub_directories = []
-    powerchords = {}
 
+    sub_directories = []
+
+    file_ticker = 0
     for ii in annotations_df[['guitarModel', 'pitch', 'audioFileName']].itertuples():
 
         pitch = ii.pitch
         model = ii.guitarModel
-        sd = powerchords_path + '/' + model
+        audioname = ii.audioFileName.split('/')[-1].strip('.wav')
 
-        if sd not in sub_directories:
-            sub_directories.append(sd + '/')
+        subd =  os.path.join(strategy_path, model)
+    #
+        if subd not in sub_directories:
+            os.makedirs(subd + '/', exist_ok = True)
 
-        base = ii.audioFileName
+        for chord, segment in strat_config.items():
+            for s, pitch_components in segment.items():
+                [*bindings], [*components] = zip(*[(records.get((model, pitch + x)), str(pitch + x)) for x in pitch_components])
+                if any([fn is None for fn in bindings]) is False:
+                    rename = '_'.join([audioname, chord, s] + components) + '.wav'
+                    rename = os.path.join(subd, rename)
+                    if write is True:
+                        combiner = sox.Combiner()
+                        combiner.build(bindings, rename, 'mix')
+                        file_ticker += 1
+                    else:
+                        pass
+                else:
+                    break
 
-        fifth = records.get((model, pitch + 7))
-        octave = records.get((model, pitch + 12))
+STRATEGIES_AVAIALBLE = ['power', 'septa', 'triad']
 
-        if any([x is None for x in [fifth, octave]]):
-            continue
-
-        else:
-            power_structure = '_'.join([str(int(pitch) + x) for x in [0,7,12]])
-            filename =  sd +  '/pwch_' +  power_structure + '.wav'
-            powerchords[filename] = [base, fifth, octave]
-
-    for sd in sub_directories:
-        os.makedirs(os.path.dirname(sd), exist_ok=True)
-
-    for filename in powerchords:
-        cbn = sox.Combiner()
-        cbn.build(powerchords.get(filename), filename, 'mix')
-
-make_powerchords()
+write_chords(write = False, strategy = 'power')
