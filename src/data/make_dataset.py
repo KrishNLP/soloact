@@ -13,6 +13,8 @@ import logging
 import pandas as pd
 import itertools
 import sys
+from collections import OrderedDict
+
 random.seed(666) # seed is set for the (hidden) global Random()
 
 def flatten(x, par = '', sep ='.'):
@@ -194,7 +196,7 @@ def augment_track(file, n, effects,
 
 			# turn effects on or off randomly
 			if int(random.choice([True, False])) == 0:
-				print ('{} skipped!'.format(effect))
+				# print ('{} skipped!'.format(effect))
 				continue # skip effect
 
 		effect_f = getattr(FX, effect)
@@ -221,7 +223,6 @@ def augment_track(file, n, effects,
 					used[param] = rand(lower, upper)
 					continue
 				raise TypeError('Will not parse random list values!')
-
 		effect_f(**used)
 		labels[effect] = used
 
@@ -243,7 +244,7 @@ def augment_track(file, n, effects,
 		return flattened_labels, feature_pipeline(array)
 
 def augment_data(subsample = False, n_augment = 1,
-			write_with_effects_to = False, make_training_set = False, source = 'power'):
+			write_with_effects_to = False, make_training_set = False, source = 'power', config = None):
 	"""
 	Augmentation pipeline with options to subsample or write augmented data
 
@@ -292,11 +293,13 @@ def augment_data(subsample = False, n_augment = 1,
 	TRACK_KIND = SOURCES[source] # note or chord
 	SOURCE_DIR = TRACK_KIND['trace']
 
-	config = 'config.yaml'
+	# must be a yaml file
+	config = 'config.yaml' if config is None else config
 	config = yaml.load(open(config, 'r'))
 
 	# SPLIT CONFIGURATIONS
 	augmentation_config = config['DataAugmentation']
+
 	pipeline_config = config['pipeline_config']
 
 	# PREDETERMINED MODEL GUITAR SPLIT
@@ -313,9 +316,13 @@ def augment_data(subsample = False, n_augment = 1,
 	if subsample is not False:
 		print ('Subsampling {} files from {} available'.format(subsample, len(train_soundfiles)))
 		train_soundfiles = random.choices(population = train_soundfiles, k = subsample)
+	else:
+		print ('Using all available data, {} files'.format(len(train_soundfiles)))
 
 	# VALIDATE EFFECTS BEFORE STARTING AUGMENTATION CHAIN
 	effects = augmentation_config.get('effects')
+
+	# Independent of the next step
 	valid, effects = validate_reduce_fx(effects)
 
 	# REDUCE LIST TO ACTIVE ONLY
@@ -324,8 +331,16 @@ def augment_data(subsample = False, n_augment = 1,
 	# NOT A KEYWORD TO AUGMENTATION FUNCTION
 	augmentation_config.pop('active')
 
+	# FIXED ORDER
+	order = ['overdrive'] + [f for f in effects.keys() if f not in ['reverb', 'overdrive']] + ['reverb']
+	ordered_effects = OrderedDict.fromkeys(order)
+
+	# ADD EFFECTS BACK TO ORDERED DICT
+	for k,v in effects.items():
+	    ordered_effects[k] = v
+
 	# REPLACE
-	augmentation_config['effects'] = effects
+	augmentation_config['effects'] = ordered_effects
 
 	if write_with_effects_to:
 
@@ -348,7 +363,6 @@ def augment_data(subsample = False, n_augment = 1,
 	store_all = []
 
 	for sf in train_soundfiles:
-
 		for i in range(n_augment):
 			store_all.append(augment_track(sf, n = i, **augmentation_config))
 
@@ -367,7 +381,7 @@ def augment_data(subsample = False, n_augment = 1,
 	chordnames = list(itertools.chain.from_iterable([[m] * n_augment for m in chordnames]))
 	Y_train['model'] = pd.Series(models)
 	Y_train['chords'] = pd.Series(chordnames)
-#
+
 	if make_training_set is True:
 		processed_dir = os.path.abspath(DATA_DIR) + '/processed/'
 		# OVERWRITES EXISTING TRAINING DATA
@@ -378,4 +392,4 @@ def augment_data(subsample = False, n_augment = 1,
 	#
 	return X_train, Y_train
 #
-augment_data(source = 'power', make_training_set =  True, n_augment = 1, write_with_effects_to =  'pwtester', subsample = 5)
+augment_data(source = 'power', make_training_set =  True, n_augment = 1, subsample = 5, config = 'config_3_9_2018.yaml')
