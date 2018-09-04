@@ -4,6 +4,12 @@ from soloact import write_annotation, write_chords, augment_data
 import os
 if __name__ == '__main__':
 
+    """
+    Function suite available to users
+
+    """
+
+
     paths = soloact.make_source_paths(os.getcwd())
 
     write_chords_flag = True
