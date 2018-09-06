@@ -1,0 +1,124 @@
+
+# ###########################
+# # AUGMENTATION SETTINGS # #
+# ###########################
+
+# LIST OF ALLOWED EFFECTS AND BOUNDS
+DataAugmentation:
+  active:
+    - overdrive
+    - reverb #at the end of fx chain
+    - chorus
+    - phaser
+    #
+  # stay constant in classification tasks
+  sustain:
+    - overdrive
+    - reverb
+
+  effects:
+    overdrive:
+      gain_db:
+        state: 'random'
+        upper: 60
+        lower: 0
+        default: ''
+      colour:
+        state: 'constant'
+        upper: 30
+        lower: 0
+        default: True
+    reverb:
+      reverberance:
+        state: 'constant'
+        upper: 100
+        lower: 50
+        default: True
+      wet_gain:
+        state: 'constant' #changed
+        upper: 3
+        lower: None
+        default: ''
+      room_scale:
+        state: 'constant'
+        upper: 100 #changed
+        lower: 50  #changed
+        default: False
+    chorus:
+      n_voices:
+        state: 'constant'
+        upper: 2
+        lower: None
+  # n_voices must match length of delays value!
+        default: False
+      delays:
+        state: 'constant'
+        upper:
+          - 30
+          - 54
+        lower: 20
+        default: False
+      speeds:
+        state: 'constant'
+        upper: 0.4
+        lower: 0.25
+        default: True
+      depths:
+        state: 'constant'
+        upper: 3
+        lower: 1
+        default: True
+    phaser: #made changes on all parameters
+      gain_in:
+        state: 'constant'
+        upper: 0.9
+        lower: None
+        default: True
+      delay:
+        state: 'constant'
+        upper: 4
+        lower: None
+        default: True
+      decay:
+        state : 'constant'
+        upper: 0.3
+        lower: None
+        default: True
+      speed:
+        state: 'constant'
+        upper: 0.3
+        lower: None
+        default: True
+    echo:  # THINK WE DON'T NEED ECHO AT THIS POINT, WE CAN SCRAP IT
+      n_echos:
+        state: 'constant'
+        upper: 4
+        lower: 0
+        default: False
+      delays:
+        state: 'constant'
+        upper:
+          - 250
+          - 500
+          - 1000
+          - 1500
+        lower: None
+        default: False
+      decays:
+        state: 'constant'
+        upper:
+          - 0.4
+          - 0.4
+          - 0.5
+          - 0.5
+        lower: None
+        default: False
+
+pipeline_config:
+  train_models:
+    - 'Fender Strat Clean Neck SC'
+    - 'Ibanez Power Strat Clean Bridge HU'
+    - 'Ibanez Power Strat Clean Bridge+Neck SC'
+
+  test_models:
+      'Ibanez Power Strat Clean Neck HU'

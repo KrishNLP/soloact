@@ -1,0 +1,6 @@
+
+
+augment_data(source = 'power',
+			make_training_set =  True,
+			n_augment = 20,
+			config = "config_power.yaml")
