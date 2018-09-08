@@ -8,14 +8,22 @@ from pprint import pprint
 paths = soloact.make_source_paths(os.getcwd())
 pitch_classes = list(paths.get('strategies').keys())
 
+
 def w_annotations(args):
+
+    """Dumb method"""
+
     write_annotation(paths)
 
 def verify_chord(chord_type):
+    """
+    Chord generation verified before creation
+
+    """
     chord_type = chord_type.pf
     if chord_type in pitch_classes:
         annotations = paths.get('interim').trace + '/meta.csv'
-        write_chords(paths, annotations_df=annotations, write=True, strategy=chord)
+        write_chords(paths, annotations=annotations, write=True, strategy=chord_type)
     else:
         print ('Strategy "{}" not available'.format(chord_type))
         print ('Try one of these {}'.format(tuple(pitch_classes)))
@@ -30,6 +38,12 @@ def augment(args):
 
 base_models = model_directory.base_models
 def run_base_model(args):
+
+    """
+    Run packaged models
+
+    """
+
     model_select = base_models.get(args.s)
     models_dir = paths.get('models_path')
     model_select['filepaths'] =  {k:models_dir()  + '/' + v for k,v in model_select.get('filepaths').items()}
@@ -44,7 +58,7 @@ def run_base_model(args):
         if '(' in args.s:
             func = globals()[args.s.split('(')[0]]
         else:
-            func = globals(args.s)
+            func = globals()[args.s]
         results = paths.get('reports_path')
         func.main(data, results_folder = results(), write_results = True if args.save == True else False, **hyperparameters)
 
