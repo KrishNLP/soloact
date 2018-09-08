@@ -1,0 +1,14 @@
+  AUGMENTED TRIAD:
+    root: [0, 4, 8]
+  DIMINISHED TRIAD:
+    first inv: [0, 3, 9]
+    root: [0, 3, 6]
+    second inv: [0, 6, 9]
+  MAJOR TRIAD:
+    first inv: [0, 3, 8]
+    root: [0, 4, 7]
+    second inv: [0, 5, 8]
+  MINOR TRIAD:
+    first inv: [0, 5, 8]
+    root: [0, 4, 8]
+    second inv: [0, 5, 7]

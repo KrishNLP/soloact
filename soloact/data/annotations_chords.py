@@ -7,14 +7,10 @@ import fnmatch
 import glob
 import argparse
 import sox
+import re
+from pprint import pprint
 
-ROOT_DIR = os.getcwd() + '/'
-DATA_RAW = 'data/raw/IDMT-SMT-GUITAR_V2/dataset1'
-DATA_DIR = os.path.join(ROOT_DIR, DATA_RAW) + '/'
-ANNOTATION_PATH = '*/annotation/*.xml'
-AUDIO_PATH = '*/audio/*.wav'
-
-def write_annotation():
+def write_annotation(paths):
 
     """
     Writing meta annotations
@@ -23,14 +19,18 @@ def write_annotation():
 
     """
     # Operates at a subdirectory level
-
-    import re
-    subdirectories = glob.glob(DATA_DIR + ANNOTATION_PATH)
+    models_as_pattern = re.compile('|'.join(paths.get('guitar_models')), re.I)
+    meta_filename = paths.get('interim').trace + 'meta.csv'
+    annotations = paths.get('annotations')
+    subdirectories = glob.glob(annotations.trace + annotations.extension)
     filt = lambda fn: re.search(r'Major|Minor', fn) is None
     files = list(filter(filt, subdirectories))
     all_meta = []
     for filepath in files:
-        guitar_model = re.sub(DATA_DIR, '', filepath).split('/')[0]
+        try:
+            guitar_model = re.search(models_as_pattern, filepath).group(0)
+        except:
+            continue
         tree = ET.parse(filepath)
         root = tree.getroot()
         record = {}
@@ -50,62 +50,54 @@ def write_annotation():
         track_path = '/'.join(track_path.split('/')[:-1]) + '/'
         record['audioFileName'] = track_path + record['audioFileName']
         all_meta.append(record)
-    to_df = pd.DataFrame(all_meta)
-    #  file_meta name could be more descriptive
-    filename = ROOT_DIR + 'data/interim/' + 'file_meta.csv'
-    to_df.to_csv(filename)
-    print ('Completed write to "{}"'.format(filename))
-    return to_df
+    meta_df = pd.DataFrame(all_meta)
+    meta_df.to_csv(open(meta_filename, 'w'))
+    print ('Completed write to "{}"'.format(meta_filename))
+    return meta_df
 
-strategies = {
-    'power': ('powerchords', 'power_strat.yaml'),
-    'septa' : ('septachords', 'septa_strat.yaml'),
-    'triad' : ('triad', 'triad_strat.yaml')
-}
-
-def write_chords(source='power', write=False):
+def write_chords(paths, annotations, write=False, strategy = 'powers'):
     """
-    setting data augmentation 
+    Building chords, triads, septachord
 
     notes -> chords
     """
 
-    # indexed_strategies = list(enumerate(list(strategies.keys())))
+    print ('Generating chords of class "{}"'.format(strategy))
 
-    assert source in strategies, '{} is not a valid source'.format(source)
-
-    bp = os.path.abspath(os.path.join(ROOT_DIR,'data/interim/'))
-    annotations = bp  + '/file_meta.csv'
+    strategy_config = yaml.load(open(paths.get('strategies').get(strategy), 'r'))
     annotations_df = pd.read_csv(annotations, index_col = 0)
-
-    chord_dir, strat_fn = strategies.get(source)
-    strat_config = yaml.load(open(strat_fn, 'r'))
-    source_path = os.path.abspath(os.path.join(bp, chord_dir))
-
+    annotations_df['pitch'] = pd.to_numeric(annotations_df['pitch'])
     records = annotations_df.set_index(['guitarModel', 'pitch'])['audioFileName'].to_dict()
-
-    sub_directories = []
+    directories = []
 
     file_ticker = 0
+
+    history = {}
+
     for ii in annotations_df[['guitarModel', 'pitch', 'audioFileName']].itertuples():
 
-        pitch = ii.pitch
+        pitch = int(ii.pitch)
         model = ii.guitarModel
+        if model not in history:
+            history[model] = 0
+
         audioname = ii.audioFileName.split('/')[-1].strip('.wav')
+        subdirectory = os.path.join(paths.get('interim').trace, strategy, model, '')
 
-        subd =  os.path.join(source_path, model)
-    #
-        if subd not in sub_directories:
-            os.makedirs(subd + '/', exist_ok = True)
+        if model not in directories:
+            os.makedirs(subdirectory, exist_ok = True)
+            directories.append(model)
 
-        for chord, segment in strat_config.items():
+        for chord, segment in strategy_config.items():
             for s, pitch_components in segment.items():
                 [*bindings], [*components] = zip(*[(records.get((model, pitch + x)), str(pitch + x)) for x in pitch_components])
                 if any([fn is None for fn in bindings]) is False:
+                    history[model] += 1
                     rename = '_'.join([audioname, chord, s] + components) + '.wav'
-                    rename = os.path.join(subd, rename)
+                    rename = os.path.join(subdirectory, rename)
                     if write is True:
                         combiner = sox.Combiner()
+                        # BINDINGS =  OTHER TRACKS MIXING
                         combiner.build(bindings, rename, 'mix')
                         file_ticker += 1
                     else:
@@ -113,8 +105,5 @@ def write_chords(source='power', write=False):
                 else:
                     break
 
-    print('chord writing finished')
-
-STRATEGIES_AVAIALBLE = ['power', 'septa', 'triad']
-
-
+    print('----- {} GENERATED BY MODEl -----'.format(strategy.upper()))
+    pprint (history)
