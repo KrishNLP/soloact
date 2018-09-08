@@ -4,6 +4,7 @@ import os
 import glob
 import argparse
 from pprint import pprint
+from argparse import RawTextHelpFormatter
 
 paths = soloact.make_source_paths(os.getcwd())
 pitch_classes = list(paths.get('strategies').keys())
@@ -75,15 +76,15 @@ if __name__ == '__main__':
     # Chord generation parser
     pitch_form_str = """
 
-        Chord creation function supporting triads, powerchords and septchords
+        - Chord creation function supporting triads, powerchords and septchords.
 
-        Files are written to "root/data/interim" as .wavs
+        - Files are written to "root/data/interim" as .wavs
 
-        .A chord is any combination of three
+        - A chord is any combination of three
         or more pitch classes that sound simultaneously.
 
     """
-    chord_generation_parser = subparsers.add_parser('write_chords', help = pitch_form_str)
+    chord_generation_parser = subparsers.add_parser('write_chords', help = pitch_form_str, formatter_class = RawTextHelpFormatter)
     chord_generation_parser.add_argument(
             '-pf', nargs = '?' , default = 'powers',
             type = str,
@@ -116,9 +117,8 @@ if __name__ == '__main__':
                 help = """STORAGE CONCERNS: Write tracks to "root/data/interim/<chord>/augmented" matching number of
                 augmentations requested by number of files (subsampling taken into account)""")
     augmentation_parser.add_argument('-o', action = 'store_true',
-            help = 'Write features (npz) and labels (csv) to path provided, defaults to curren directory')
+            help = 'Write features (npz) and labels (csv) to reports')
     augmentation_parser.set_defaults(func = augment)
-
 
     calibration_parser = subparsers.add_parser('train_existing',
         help  = 'Use pre-packaged configurations for training')

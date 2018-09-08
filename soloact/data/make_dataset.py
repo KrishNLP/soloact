@@ -385,11 +385,11 @@ def augment_data(paths, subsample = False, augment_x = 1, configuration = None,
 	features = pad(all_features)
 	labels = pd.DataFrame(list(labels))
 
-	if write_data is not True:
-		# processed_directory = paths.get('processed').trace
-		write_dir = os.path.join(write_data, '') if write_data != '.' else ''
+	if write_data is True:
+		results_dir = paths.get('reports_path')
+		write_dir = os.path.join(results_dir(), '')
 		np.save(write_dir  + 'training_X_' + strategy, arr=features)
 		labels.to_csv(open(write_dir + 'training_Y_' + strategy  + '.csv', 'w'))
-		print ('Features and labels written to "{}"'.format(processed_directory))
+		print ('Features and labels written to "{}"'.format(write_dir))
 
 	return features, labels
