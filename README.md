@@ -10,7 +10,7 @@ A Batch-15 Capstone project - Data Science Retreat, Berlin, 2018.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development.
 
 ### Prerequisites
 
@@ -132,8 +132,13 @@ You should be greeted with a progress bar.
 
 
 ##### 4. Training
+======
 
-We have included sample features, labels and configurations for you to train with. We will be uploading a suite to generate predictions shortly but you can refer to our notebooks for evaluation.
+We have included sample features, labels and configurations for you to train with for a variety of tasks.
+
+- 3 effect classification model
+- 4 effect classification model
+- Joint classification / regression model
 
 ```
 python main.py train_existing -h
@@ -142,13 +147,19 @@ python main.py train_existing -h
 <!-- ![alt text](assets/train_existing.png) -->
 <img src="assets/train_existing.png" width="600">
 
-Hopefully this is what you'll see
+```
+python main.py train_existing -t -p -save 'multi_class_model(4)'
+```
+
 
 <!-- ![alt text](https://media.giphy.com/media/27bZaaftI7XMqeNBO7/giphy.gif) -->
 <img src="https://media.giphy.com/media/27bZaaftI7XMqeNBO7/giphy.gif" width="600">
 
 
 #### 5. Evaluation
+======
+
+For now please look to our note books for evaluation and predictions.
 <!---
 < To Do >
 
