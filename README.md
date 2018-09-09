@@ -1,14 +1,38 @@
 # SOLO ACT
 
-One Paragraph of project description goes here
+"Music has often thrived on transforming faults into influential sound effects. Before professional studio production enabled granular tweaks in sound, standalone guitar effects emerged from deliberately converting hardware faults—often caused by the limitations of amplifiers—into positive features."
 
+Acceptable commercial sounds are, now, so far obfuscated in precision and nuanced effect, the previously trivial, save talent and hard work, undertaking of emulating your idol now comes with great culpability.
 
+Soloact hopes to stave off tired ears and the idiosyncrasies of sound engineering with a machine solution for guitar effect detection using deep neural networks.  We also aim to engage the average guitar-playing Joe(ess) with a suite of educational tools to help build a progressive understanding of audio profiling.
 
+A Batch-15 Capstone project - Data Science Retreat, Berlin, 2018.
 
-Not all deep networks need to obfuscate learning.
+## Getting Started
 
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-Music has often thrived on transforming faults into influential sound effects. Before professional studio production enabled granular tweaks in sound, standalone guitar effects emerged from deliberately converting hardware faults—often caused by the limitations of amplifiers—into positive features.
+### Prerequisites
+
+- Python 3.6
+- Conda
+```
+https://conda.io/docs/user-guide/install/macos.html
+```
+- IDMT Data (reg. required)
+```
+https://www.idmt.fraunhofer.de/en/business_units/m2d/smt/guitar.html
+```
+- Having moved dataset1 to your data/raw directory your folder structure should look something like this
+
+![alt text](assets/directory_structure.png)
+
+### Installing
+
+```
+conda install --yes --file requirements.txt
+
+```
 
 # DATA
 =======
@@ -27,7 +51,7 @@ We don't venture into the available polyphonic data. Instead we mix monophonic p
 
 ## Engineering
 
-We programmatically mix tracks with combinations of overdrive, reverberance, chorus, phaser - feeling these best capture hallmark sounds of electric guitar play. Some effects permitted randomization between on/off states while others i.e. overdrive were too audibly fundamental for this kind of intermittence. To capture granularity, and realistic waveforms, we impose strict bounds on each effect with values transcribed by headphones and hand. The following image depicts a clear response of powerchord waveforms to multi-effect augmentations.
+We programmatically mix tracks with combinations of overdrive, reverberance, chorus, phaser - feeling these best capture hallmark sounds of electric guitar play. Some effects are permitted randomization between on/off states while others i.e. overdrive are too audibly fundamental for this kind of intermittence. To capture granularity, and realistic waveforms, we impose strict bounds on each effect with values transcribed by headphones and hand. The following image depicts a clear response of powerchord waveforms to multi-effect augmentations.
 
 ![alt text](assets/multi_class_effect.png)
 
@@ -37,50 +61,17 @@ https://www.youtube.com/watch?v=MpHA8hoc9SU
 
 #### MFCC
 
+Nothing special here, we use MFCCs to capture frequency domain characteristics - taking mean values to condense representations.
 
-
-
-
-
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## TUTORIAL
 
 **Draft**
 
-## CLI
+## Command Line Interface
 ======
 
-All major features are operable from root's main.py accessible with conventional argparse notation
+As part of our intention to educate all major features are operable from root's main.py accessible with conventional argparse notation.
 
 ```
 python main.py -h
@@ -101,57 +92,59 @@ python main.py make_meta -r
 ##### 2. GENERATE CHORDS
 ======
 
-Choose between triads, powerchords and septchords
-You'll find how strategies are composed in "soloact/soloact/data"
+- Choose between triads, powerchords and septchords so you can start augmenting
+- You'll find how strategies are composed in "soloact/soloact/data/strategies" folders
 
 ![alt text](assets/write_chords.png)
 
 ##### 3. Augment your data
 ======
 
-Since this is a self contained study we offer feature extraction as means of reducing storage required for training data.
-Using the -wa argument will write augmented tracks to a nested directory in the "data/interim/" folder. 
-Modeling your data for classification will induce randomized on/off states at the effect level for those not required to persist - see "soloact/models" for .yaml configs used in the subsequent function  - train existing.
+Notes:
 
+- We offer mandatory feature extraction between Chroma and MFCCs as means of reducing storage required for training data but feel compelled to offer more flexibility in the near future.
+- Using the "-wa" argument will write augmented tracks to a nested directory in the "data/interim/" folder. Raw files can be large so please contemplate subsampling with 's' then writing your augmented tracks.  
+- Modeling your data for classification will induce randomized on/off states at the effect level for those not required to persist - see "soloact/models" for .yaml configs used in the subsequent function  - train existing.
 
+```
+python main.py augment_data -h
+```
 
 ![alt text](assets/augment_data.png)
 
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+Here we call augment powerchord data with 5 augmentations for each of our 5 tracks, extracting MFCCs and writing to our reports folder. The chord kind is mandatory and -o evaluates to True if flagged.
 
 ```
-Give an example
+python main.py augment_data -x 5 -fx mfcc -s 5 -o powers
 ```
 
-### And coding style tests
+You should be greeted with a progress bar.
 
-Explain what these tests test and why
+![alt text](https://giphy.com/gifs/9PvqFy0gV4H0GCSKc0)
+
+##### 4. Training
+
+We have included sample features, labels and configurations for you to train with. We will be uploading a suite to generate predictions shortly.
 
 ```
-Give an example
+python main.py train_existing -h
 ```
 
-## Deployment
+![alt text](assets/train_existing.png)
 
-Add additional notes about how to deploy this on a live system
+Hopefully this is what you'll see
 
-## Built With
+![alt text](https://giphy.com/gifs/27bZaaftI7XMqeNBO7)
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+#### 5. Evaluation
+<!---
+< To Do >
 
-### Glossary
 
-- https://en.wikipedia.org/wiki/Pitch_class
-- https://en.wikipedia.org/wiki/44,100100_Hz
+## Testing
 
-## Contributing
+ ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
@@ -161,7 +154,12 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 * **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project. --->
+
+### Glossary
+
+- https://en.wikipedia.org/wiki/Pitch_class
+- https://en.wikipedia.org/wiki/44,100100_Hz
 
 ## License
 
