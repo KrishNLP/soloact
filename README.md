@@ -25,7 +25,9 @@ https://www.idmt.fraunhofer.de/en/business_units/m2d/smt/guitar.html
 ```
 - Having moved dataset1 to your data/raw directory your folder structure should look something like this
 
-![alt text](assets/directory_structure.png)
+<!-- ![alt text](assets/directory_structure.png) -->
+
+<img src="assets/directory_structure.png" width="600">
 
 ### Installing
 
@@ -53,9 +55,12 @@ We don't venture into the available polyphonic data. Instead we mix monophonic p
 
 We programmatically mix tracks with combinations of overdrive, reverberance, chorus, phaser - feeling these best capture hallmark sounds of electric guitar play. Some effects are permitted randomization between on/off states while others i.e. overdrive are too audibly fundamental for this kind of intermittence. To capture granularity, and realistic waveforms, we impose strict bounds on each effect with values transcribed by headphones and hand. The following image depicts a clear response of powerchord waveforms to multi-effect augmentations.
 
-![alt text](assets/multi_class_effect.png)
+<!-- ![alt text](assets/multi_class_effect.png) -->
+<img src="assets/multi_class_effect.png" width="600">
 
-https://www.youtube.com/watch?v=MpHA8hoc9SU
+### Effects
+
+- https://www.youtube.com/watch?v=MpHA8hoc9SU
 
 ## Feature extraction
 
@@ -63,12 +68,11 @@ https://www.youtube.com/watch?v=MpHA8hoc9SU
 
 Nothing special here, we use MFCCs to capture frequency domain characteristics - taking mean values to condense representations.
 
-
 ## TUTORIAL
 
 **Draft**
 
-## Command Line Interface
+### End-to-End with the command line
 ======
 
 As part of our intention to educate all major features are operable from root's main.py accessible with conventional argparse notation.
@@ -77,7 +81,8 @@ As part of our intention to educate all major features are operable from root's 
 python main.py -h
 ```
 
-![alt text](assets/cli_intro_1.png)
+<!-- ![alt text](assets/cli_intro_1.png) -->
+<img src="assets/cli_intro_1.png" width="600">
 
 ##### 1. PARSE ANNOTATIONS
 ======
@@ -95,7 +100,8 @@ python main.py make_meta -r
 - Choose between triads, powerchords and septchords so you can start augmenting
 - You'll find how strategies are composed in "soloact/soloact/data/strategies" folders
 
-![alt text](assets/write_chords.png)
+<!-- ![alt text](assets/write_chords.png) -->
+<img src="assets/write_chords.png" width="600">
 
 ##### 3. Augment your data
 ======
@@ -110,7 +116,8 @@ Notes:
 python main.py augment_data -h
 ```
 
-![alt text](assets/augment_data.png)
+<!-- ![alt text](assets/augment_data.png) -->
+<img src="assets/augment_data.png" width="600">
 
 Here we call augment powerchord data with 5 augmentations for each of our 5 tracks, extracting MFCCs and writing to our reports folder. The chord kind is mandatory and -o evaluates to True if flagged.
 
@@ -120,21 +127,26 @@ python main.py augment_data -x 5 -fx mfcc -s 5 -o powers
 
 You should be greeted with a progress bar.
 
-![alt text](https://giphy.com/gifs/9PvqFy0gV4H0GCSKc0)
+<!-- ![alt text](https://media.giphy.com/media/9PvqFy0gV4H0GCSKc0/giphy.gif) -->
+<img src="https://media.giphy.com/media/9PvqFy0gV4H0GCSKc0/giphy.gif" width="600">
+
 
 ##### 4. Training
 
-We have included sample features, labels and configurations for you to train with. We will be uploading a suite to generate predictions shortly.
+We have included sample features, labels and configurations for you to train with. We will be uploading a suite to generate predictions shortly but you can refer to our notebooks for evaluation.
 
 ```
 python main.py train_existing -h
 ```
 
-![alt text](assets/train_existing.png)
+<!-- ![alt text](assets/train_existing.png) -->
+<img src="assets/train_existing.png" width="600">
 
 Hopefully this is what you'll see
 
-![alt text](https://giphy.com/gifs/27bZaaftI7XMqeNBO7)
+<!-- ![alt text](https://media.giphy.com/media/27bZaaftI7XMqeNBO7/giphy.gif) -->
+<img src="https://media.giphy.com/media/27bZaaftI7XMqeNBO7/giphy.gif" width="600">
+
 
 #### 5. Evaluation
 <!---
@@ -163,10 +175,9 @@ See also the list of [contributors](https://github.com/your/project/contributors
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Dr. Tristan Behrens - https://github.com/AI-Guru
+* Adam Green - https://github.com/ADGEfficiency
