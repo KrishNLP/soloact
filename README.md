@@ -2,11 +2,16 @@
 
 "Music has often thrived on transforming faults into influential sound effects. Before professional studio production enabled granular tweaks in sound, standalone guitar effects emerged from deliberately converting hardware faults—often caused by the limitations of amplifiers—into positive features."
 
-Acceptable commercial sounds are, now, so far obfuscated in precision and nuanced effect, the previously trivial, save talent and hard work, undertaking of emulating your idol now comes with great culpability.
+
+https://www.theatlantic.com/technology/archive/2015/03/what-makes-an-electric-guitar-sound-like-an-electric-guitar/386441/
+
+
+Acceptable commercial sounds are, now, so far obfuscated in precision and nuanced effect, that a previously trivial, save talent and hard work, undertaking of emulating your idol now comes with great culpability.
 
 Soloact hopes to stave off tired ears and the idiosyncrasies of sound engineering with a machine solution for guitar effect detection using deep neural networks.  We also aim to engage the average guitar-playing Joe(ess) with a suite of educational tools to help build a progressive understanding of audio profiling.
 
-A Batch-15 Capstone project - Data Science Retreat, Berlin, 2018.
+**
+A Batch-15 Capstone project - Data Science Retreat, Berlin, 2018.**
 
 ## Getting Started
 
@@ -45,6 +50,8 @@ conda install --yes --file requirements.txt
 
 "The dataset consists of four subsets. The first (*SOLOACT*: what we use) contains all introduced playing techniques (plucking styles: finger-style, muted, picked; expression styles: normal, bending, slide, vibrato, harmonics, dead-notes) and is provided with a bit depth of 24 Bit."
 
+https://www.idmt.fraunhofer.de/en/business_units/m2d/smt/guitar.html
+
 We don't venture into the available polyphonic data. Instead we mix monophonic pitch classes into 3 commonly utilized chord structures; triads, powerchords and septachords at strict 44100 Hz sampling rates.
 
 ### Powerchords
@@ -58,7 +65,7 @@ We programmatically mix tracks with combinations of overdrive, reverberance, cho
 <!-- ![alt text](assets/multi_class_effect.png) -->
 <img src="assets/multi_class_effect.png" width="600">
 
-### Effects
+##### Video on effects we use
 
 - https://www.youtube.com/watch?v=MpHA8hoc9SU
 
@@ -66,7 +73,9 @@ We programmatically mix tracks with combinations of overdrive, reverberance, cho
 
 #### MFCC
 
-Nothing special here, we use MFCCs to capture frequency domain characteristics - taking mean values to condense representations.
+Nothing special here, we use MFCCs to capture frequency domain characteristics - taking mean values to condense representations. Mels are well suited to mimic how humans hear.
+
+
 
 ## TUTORIAL
 
@@ -159,7 +168,32 @@ python main.py train_existing -t -p -save 'multi_class_model(4)'
 #### 5. Evaluation
 ======
 
-For now please look to our note books for evaluation and predictions.
+###### Classification
+======
+
+3-class classification
+(Overdrive, Chorus, Reverb)
+<img src="assets/3-class.png" width="600">
+
+**90 % accuracy**
+
+4-class classification
+(Overdrive, Chorus, Reverb, Phaser)
+
+<img src="assets/4-class.png" width="600">
+
+**63% accuracy**
+
+###### Regression
+======
+
+Overdrive predictions (out of 100)
+
+<img src="assets/regression.png" width="600">
+
+
+
+
 <!---
 < To Do >
 
