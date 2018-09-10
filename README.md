@@ -10,6 +10,7 @@ Acceptable commercial sounds are, now, so far obfuscated in precision and nuance
 
 Soloact hopes to stave off tired ears and the idiosyncrasies of sound engineering with a machine solution for guitar effect detection using deep neural networks.  We also aim to engage the average guitar-playing Joe(ess) with a suite of educational tools to help build a progressive understanding of audio profiling.
 
+
 **
 A Batch-15 Capstone project - Data Science Retreat, Berlin, 2018.**
 
@@ -31,6 +32,7 @@ https://www.idmt.fraunhofer.de/en/business_units/m2d/smt/guitar.html
 - Having moved dataset1 to your data/raw directory your folder structure should look something like this
 
 <!-- ![alt text](assets/directory_structure.png) -->
+
 
 <img src="assets/directory_structure.png" width="600">
 
@@ -65,7 +67,7 @@ We programmatically mix tracks with combinations of overdrive, reverberance, cho
 <!-- ![alt text](assets/multi_class_effect.png) -->
 <img src="assets/multi_class_effect.png" width="600">
 
-##### Video on effects we use
+##### Video detailing effects used
 
 - https://www.youtube.com/watch?v=MpHA8hoc9SU
 
@@ -74,7 +76,6 @@ We programmatically mix tracks with combinations of overdrive, reverberance, cho
 #### MFCC
 
 Nothing special here, we use MFCCs to capture frequency domain characteristics - taking mean values to condense representations. Mels are well suited to mimic how humans hear.
-
 
 
 ## TUTORIAL
@@ -173,6 +174,7 @@ python main.py train_existing -t -p -save 'multi_class_model(4)'
 
 3-class classification
 (Overdrive, Chorus, Reverb)
+
 <img src="assets/3-class.png" width="600">
 
 **90 % accuracy**
