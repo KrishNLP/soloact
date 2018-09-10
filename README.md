@@ -6,7 +6,7 @@
 https://www.theatlantic.com/technology/archive/2015/03/what-makes-an-electric-guitar-sound-like-an-electric-guitar/386441/
 
 
-Acceptable commercial sounds are, now, so far obfuscated in precision and nuanced effect, that a previously trivial, save talent and hard work, undertaking of emulating your idol now comes with great culpability.
+<!--- Acceptable commercial sounds are, now, so far obfuscated in precision and nuanced effect, that a previously trivial, save talent and hard work, undertaking of emulating your idol now comes with great culpability. -->
 
 Soloact hopes to stave off tired ears and the idiosyncrasies of sound engineering with a machine solution for guitar effect detection using deep neural networks.  We also aim to engage the average guitar-playing Joe(ess) with a suite of educational tools to help build a progressive understanding of audio profiling.
 
@@ -82,7 +82,7 @@ Nothing special here, we use MFCCs to capture frequency domain characteristics -
 
 **Draft**
 
-### End-to-End with the command line
+### At the command line
 ======
 
 As part of our intention to educate all major features are operable from root's main.py accessible with conventional argparse notation.
@@ -113,7 +113,7 @@ python main.py make_meta -r
 <!-- ![alt text](assets/write_chords.png) -->
 <img src="assets/write_chords.png" width="600">
 
-##### 3. Augment your data
+##### 3. AUGMENTATION
 ======
 
 Notes:
@@ -141,7 +141,7 @@ You should be greeted with a progress bar.
 <img src="https://media.giphy.com/media/9PvqFy0gV4H0GCSKc0/giphy.gif" width="600">
 
 
-##### 4. Training
+##### 4. TRAINING
 ======
 
 We have included sample features, labels and configurations for you to train with for a variety of tasks.
@@ -166,7 +166,7 @@ python main.py train_existing -t -p -save 'multi_class_model(4)'
 <img src="https://media.giphy.com/media/27bZaaftI7XMqeNBO7/giphy.gif" width="600">
 
 
-#### 5. Evaluation
+#### 5. EVALUATION
 ======
 
 ###### Classification
